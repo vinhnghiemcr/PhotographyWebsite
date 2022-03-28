@@ -68,6 +68,12 @@ const main = async () => {
         pictures: [picture1._id, picture2._id]
     })
     await service1.save()
+    package1.service = service1._id
+    await package1.save()
+    package2.service = service1._id
+    await package2.save()
+    package3.service = service1._id
+    await package3.save()
 
     const package4 = new Package(
         {
@@ -95,6 +101,7 @@ const main = async () => {
         }
     )
     await package6.save()
+
     const picture3 = new Picture(
         {
             url: "https://github.com/vinhnghiemcr/photography-website/blob/main/images/portrait-1.jpg?raw=true",
@@ -130,6 +137,12 @@ const main = async () => {
         pictures: [picture3._id, picture4._id]
     })
     await service2.save()
+    package4.service = service2._id
+    await package4.save()
+    package5.service = service2._id
+    await package5.save()
+    package6.service = service2._id
+    await package6.save()
 
     
     const user1 = new User(
