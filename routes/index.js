@@ -21,8 +21,11 @@ router.get('/collection/pictures', controllers.getCollectionPictures)
 //Create a new User
 router.post('/users', controllers.createUser)
 
+//Get all users
+router.get('/users', controllers.getUsers)
+
 //get a user by id
-router.get('/user/:id')
+router.get('/users/:id', controllers.getUserById)
 
 //Create a review of a user
 router.post('/user/:id/reviews')
