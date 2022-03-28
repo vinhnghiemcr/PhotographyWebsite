@@ -7,7 +7,7 @@ const Picture = new Schema(
     location: { type: String },
     url: { type: String, required: true },
     forSale: { type: Boolean, required: true},
-    forSale: { type: Number}
+    price: { type: Number}
   },
   { timestamps: true }
 )

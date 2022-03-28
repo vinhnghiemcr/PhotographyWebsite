@@ -49,6 +49,18 @@ const main = async () => {
     )
     await picture2.save()
 
+    const picSale1 = new Picture(
+        {   
+            name: "Niagara Falls",
+            description: "Spring 2018",
+            location: "Buffalo, NY",
+            url: "https://github.com/vinhnghiemcr/photography-website/blob/main/images/avatar-bg.jpg?raw=true",
+            forSale: true,
+            price: 5
+        }
+    )
+    await picSale1.save()
+
     const service1 = new Service({
         name: "Family",
         description: "Saving precious moments of the family",
@@ -57,7 +69,32 @@ const main = async () => {
     })
     await service1.save()
 
-  
+    
+    const user1 = new User(
+        {
+            username: "nghiem",
+            password: "nghiem",
+            displayName: "Nghiem",
+            email: "vinhnghiemcr@gmail.com",
+            loginCount: 0,
+            pictures: [picSale1._id],
+
+        }
+    )
+    await user1.save()
+
+    const review1 = new Review(
+        {
+            name: "Truong",
+            description: "Beutifull Pictures",
+            user: user1._id
+        }
+    )
+    review1.save()
+
+    user1.reviews = [review1._id]
+    user1.save()
+
   console.log('Created database!')
 }
 const run = async () => {
@@ -67,5 +104,7 @@ const run = async () => {
   await main()
   db.close()
 }
+
+
 
 run()
