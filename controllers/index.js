@@ -1,0 +1,1 @@
+const { User, Service, Package, Picture, Review } = require('../models/index')
