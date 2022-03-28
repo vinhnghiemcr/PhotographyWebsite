@@ -28,12 +28,12 @@ router.get('/users', controllers.getUsers)
 router.get('/users/:id', controllers.getUserById)
 
 //Create a review of a user
-router.post('/user/:id/reviews')
+router.post('/users/:id/reviews', controllers.createReview)
 
 //get all reviews of a user
-router.get('/user/:id/reviews')
+router.get('/users/:id/reviews', controllers.getReviewByUserId)
 
 //get all reviews in the database
-router.get('/reviews')
+router.get('/reviews', controllers.gettAllReviews)
 
 module.exports = router;

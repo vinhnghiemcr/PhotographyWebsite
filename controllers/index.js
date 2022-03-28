@@ -98,7 +98,39 @@ const getUserById = async (req,res) => {
     }
 }
 
+const createReview = async (req,res) => {
+    try {
+        const review = new Review(req.body)
+        const user = await User.findById(req.params.id)
+        await User.findByIdAndUpdate(req.params.id, {reviews: [...user.reviews, review._id]})
+        await review.save()
+        return res.status(200).json(review)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
+const getReviewByUserId = async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id)
+        const reviews = []
+        for await (const review of user.reviews) {
+            reviews.push(await Review.findById(review))
+        }
+        return res.status(200).json(reviews)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+const gettAllReviews = async (req,res) => {
+    try {
+        const reviews = await Review.find()
+        return res.status(200).json(reviews)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 module.exports = {
     getServices,
@@ -108,4 +140,7 @@ module.exports = {
     createUser,
     getUsers,
     getUserById,
+    createReview,
+    getReviewByUserId,
+    gettAllReviews
 }
