@@ -13,13 +13,13 @@ router.get('/services', controllers.getServices)
 router.get('/services/:id/packages', controllers.getPackagesByServiceId)
 
 //get pictures by service id
-router.get('/services/:id/pictures')
+router.get('/services/:id/pictures', controllers.getPictureByServiceId)
 
 //get all picture of the collection
-router.get('/collection/pictures')
+router.get('/collection/pictures', controllers.getCollectionPictures)
 
 //Create a new User
-router.post('/users')
+router.post('/users', controllers.createUser)
 
 //get a user by id
 router.get('/user/:id')

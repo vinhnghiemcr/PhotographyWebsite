@@ -157,6 +157,18 @@ const main = async () => {
         }
     )
     await user1.save()
+    const user2 = new User(
+        {
+            username: "nick",
+            password: "nick",
+            displayName: "Nick",
+            email: "nick@gmail.com",
+            loginCount: 0,
+            pictures: [picSale2._id],
+
+        }
+    )
+    await user2.save()
 
     const review1 = new Review(
         {
