@@ -1,16 +1,21 @@
-import { Link } from 'react-router-dom'
+import React from 'react'
 
-const Header = () => {
+const Search = (props) => {
 
   return (
-    <header>
-      <h2 className='rainbow-text'>World of Games</h2>
-      <nav>
-        <Link to='/' className='glow-effect'>Home</Link>
-        <Link to='about' className='glow-effect'>About</Link>
-      </nav>
-    </header>
+    <form onSubmit={props.onSubmit}>
+      <input
+        type="text"
+        name="search"
+        value={props.value}
+        placeholder="Search Games"
+        onChange={props.onChange}
+
+      ></input>
+      <button type='submit' className='submit'>Submit</button>
+
+    </form>
   )
 }
 
-export default Header
+export default Search
