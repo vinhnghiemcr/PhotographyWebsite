@@ -69,6 +69,68 @@ const main = async () => {
     })
     await service1.save()
 
+    const package4 = new Package(
+        {
+            name: "Basic",
+            description: "Package description",
+            price: 150
+        }
+    )
+    await package4.save()
+
+    const package5 = new Package(
+        {
+            name: "Advanced",
+            description: "Package description",
+            price: 200
+        }
+    )
+    await package5.save()
+
+    const package6 = new Package(
+        {
+            name: "Premium",
+            description: "Package description",
+            price: 300
+        }
+    )
+    await package6.save()
+    const picture3 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/photography-website/blob/main/images/portrait-1.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await picture3.save()
+    
+    const picture4 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/photography-website/blob/main/images/portrait-3.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await picture4.save()
+
+    const picSale2 = new Picture(
+        {   
+            name: "St Mary's Glacier",
+            description: "Winter 2020",
+            location: "Loveland, Co",
+            url: "https://github.com/vinhnghiemcr/photography-website/blob/main/images/_DSC0026.jpg?raw=true",
+            forSale: true,
+            price: 10
+        }
+    )
+    await picSale2.save()
+
+    const service2 = new Service({
+        name: "Portrait",
+        description: "Saving precious moments of the family",
+        packages: [package4._id, package5._id, package6._id],
+        pictures: [picture3._id, picture4._id]
+    })
+    await service2.save()
+
     
     const user1 = new User(
         {
@@ -90,10 +152,10 @@ const main = async () => {
             user: user1._id
         }
     )
-    review1.save()
+    await review1.save()
 
     user1.reviews = [review1._id]
-    user1.save()
+    await user1.save()
 
   console.log('Created database!')
 }
@@ -101,6 +163,8 @@ const run = async () => {
     await Package.deleteMany()
     await Picture.deleteMany()
     await Service.deleteMany()
+    await User.deleteMany()
+    await Review.deleteMany()
   await main()
   db.close()
 }

@@ -7,7 +7,7 @@ const router = Router()
 router.get('/', (req, res) => res.send('This is root!'))
 
 //get all services in db
-router.get('/services')
+router.get('/services', controllers.getServices)
 
 //get all package related to a paticular service id
 router.get('/services/:id/packages')
