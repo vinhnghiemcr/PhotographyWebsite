@@ -1,10 +1,17 @@
-
+import { useState } from "react";
+import Login from "../components/Login";
 
 const LoginPage = () => {
 
-    return (
-        <div>
+    
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+  
 
+    return (
+        <div >
+            <Login />
         </div>
     )
 }

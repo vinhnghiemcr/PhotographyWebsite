@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import LoginPage from './pages/LoginPage'
 import ServicePage from './pages/ServicePage'
+import CollectionPage from './pages/ColectionPage'
 
 import Nav from './components/Nav'
 import { useState, useEffect } from 'react'
@@ -16,7 +17,7 @@ function App() {
   const BASE_URL = 'http://localhost:3001/api'
   const [user, setUser] = useState({})
   const [services, setServices] = useState([])
-  const [cart, setCart] = useState(0)
+  const [cart, setCart] = useState([])
   
   useEffect( async () => {
     const response = await axios.get(`${BASE_URL}/services`)
@@ -35,6 +36,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<HomePage BASE_URL={BASE_URL} services={services}/>} />
+          <Route path='collection' element={<CollectionPage />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage />} />
