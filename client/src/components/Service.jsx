@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 import Picture from "./Picture"
 
 
@@ -12,8 +13,9 @@ const Service = ({id,name, description, packages, pictures}) => {
 
     return (
         <div className="Service" >
-            hello
-            <h3>{name}</h3>
+            <Link to={`/service/${id}`} >
+                <h3>{name}</h3>
+            </Link>
             <p>{description}</p>
 
             {pictures.map((picture) => 

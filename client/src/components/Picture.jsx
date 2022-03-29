@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 
 
 const Picture = ({url, name, description, forSale, price}) => {

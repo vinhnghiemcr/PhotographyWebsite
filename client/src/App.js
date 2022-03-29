@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import LoginPage from './pages/LoginPage'
+import ServicePage from './pages/ServicePage'
 
 import Nav from './components/Nav'
 import { useState, useEffect } from 'react'
@@ -36,6 +37,7 @@ function App() {
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage />} />
+          <Route path='service/:id' element={<ServicePage />} />
 
         </Routes>
       </main>
