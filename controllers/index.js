@@ -123,6 +123,19 @@ const getReviewByUserId = async (req,res) => {
     }
 }
 
+const updateReview = async (req,res) => {
+    // try {
+    //     const user = await User.findById(req.params.id)
+    //     const reviews = []
+    //     for await (const review of user.reviews) {
+    //         reviews.push(await Review.findById(review))
+    //     }
+    //     return res.status(200).json(reviews)
+    // } catch (error) {
+    //     return res.status(500).send(error.message)
+    // }
+}
+
 const gettAllReviews = async (req,res) => {
     try {
         const reviews = await Review.find()
@@ -142,5 +155,6 @@ module.exports = {
     getUserById,
     createReview,
     getReviewByUserId,
+    updateReview,
     gettAllReviews
 }

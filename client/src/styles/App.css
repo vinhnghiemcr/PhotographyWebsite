@@ -45,3 +45,7 @@ input:focus::placeholder {
 main {
   padding: 2em 0;
 }
+
+.picture img {
+  width: 200px;
+}

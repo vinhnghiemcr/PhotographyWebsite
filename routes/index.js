@@ -33,6 +33,9 @@ router.post('/users/:id/reviews', controllers.createReview)
 //get all reviews of a user
 router.get('/users/:id/reviews', controllers.getReviewByUserId)
 
+//update a review
+router.put('/users/:id/reviews', controllers.updateReview)
+
 //get all reviews in the database
 router.get('/reviews', controllers.gettAllReviews)
 

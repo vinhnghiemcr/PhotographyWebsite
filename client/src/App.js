@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import './styles/App.css'
+import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
@@ -17,12 +18,11 @@ function App() {
   
   useEffect( async () => {
     const response = await axios.get(`${BASE_URL}/services`)
-    setServices(response.data)
-    console.log(services, 'SERVICES');
-    
+    setServices(response.data)    
   }, [])
 
-
+  console.log(services, "SERVICES");
+  
 
   return (
     <div className="App">
