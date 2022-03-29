@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-import axios from 'axios'
+
 import Service from "../components/Service"
 
 const HomePage = ({ services }) => {
