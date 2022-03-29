@@ -16,6 +16,7 @@ function App() {
   const BASE_URL = 'http://localhost:3001/api'
   const [user, setUser] = useState({})
   const [services, setServices] = useState([])
+  const [cart, setCart] = useState(0)
   
   useEffect( async () => {
     const response = await axios.get(`${BASE_URL}/services`)
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Nav />
+        <Nav cart={cart} />
       </header>
 
       <main>
@@ -37,7 +38,7 @@ function App() {
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage />} />
-          <Route path='service/:id' element={<ServicePage />} />
+          <Route path='service/:id' element={<ServicePage setCart={setCart} services={services}/>} />
 
         </Routes>
       </main>

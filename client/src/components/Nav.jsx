@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({cart}) => {
 
   return (
     <header className='nav'>
@@ -9,6 +9,7 @@ const Nav = () => {
         <Link to='/' className='glow-effect'>Home</Link>
         <Link to='/about' className='glow-effect'>About</Link>
         <Link to='/contact' className='glow-effect'>Contact</Link>
+        <Link to='' className='glow-effect'>Cart: {cart}</Link>
       </nav>
     </header>
   )
