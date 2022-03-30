@@ -5,7 +5,7 @@ const User = new Schema(
     username: { type: String, required: true },
     password: { type: String, required: true },
     displayName: { type: String, required: true},
-    email: { type: String, required: true},
+    email: { type: String},
     loginCount: { type: Number, required: true, max: 3},
     packages: [{ type: Schema.Types.ObjectId, ref: 'Package'}],
     pictures: [{ type: Schema.Types.ObjectId, ref: 'Picture'}],

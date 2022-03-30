@@ -24,11 +24,21 @@ router.post('/users', controllers.createUser)
 //Get all users
 router.get('/users', controllers.getUsers)
 
+//Verify a user
+router.get('/users/verify', controllers.verifyUser)
+
 //get a user by id
 router.get('/users/:id', controllers.getUserById)
 
+//get a user by id
+router.delete('/users/:id', controllers.deleteUserById)
+
+
 //Create a review of a user
 router.post('/users/:id/reviews', controllers.createReview)
+
+//Create a review of a user
+router.delete('/users/:id/reviews/:rid', controllers.deleteReview)
 
 //get all reviews of a user
 router.get('/users/:id/reviews', controllers.getReviewByUserId)

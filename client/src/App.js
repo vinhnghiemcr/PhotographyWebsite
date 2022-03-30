@@ -15,7 +15,7 @@ import axios from 'axios'
 function App() {
   
   const BASE_URL = 'http://localhost:3001/api'
-  const [user, setUser] = useState({})
+  const [currentuser, setCurrenttUser] = useState(null)
   const [services, setServices] = useState([])
   const [cart, setCart] = useState([])
   
@@ -23,8 +23,6 @@ function App() {
     const response = await axios.get(`${BASE_URL}/services`)
     setServices(response.data)    
   }, [])
-
-  console.log(services, "SERVICES");
   
 
   return (

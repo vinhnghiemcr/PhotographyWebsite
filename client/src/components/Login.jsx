@@ -1,21 +1,22 @@
 
 
-const Login = () => {
+const Login = ({user, handleChange, handleSubmmit}) => {
+ 
 
     return (
-        <form >
+        <form onSubmit={handleSubmmit}>
                 <div className="input-container">
-                <label>Username </label>
-                <input type="text" name="uname" required />
+                <label>Username: </label>
+                <input onChange={handleChange} type="text" name="username" value={user.username} required />
                 </div>
                 <div className="input-container">
-                <label>Password </label>
-                <input type="password" name="pass" required />
+                <label>Password: </label>
+                <input onChange={handleChange} type="password" name="password" value={user.password} required />
                 </div>
                 <div className="button-container">
-                <input type="submit" />
+                <input type="submit"/>
                 </div>
-            </form>
+        </form>
     )
 }
 export default Login

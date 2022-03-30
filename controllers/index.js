@@ -82,8 +82,33 @@ const createUser = async (req, res) => {
 
 const getUsers = async (req,res) => {
     try {
-        const users = await User.find()
-        return res.status(200).json(users)
+        const { username } = req.query
+        if ( username) {
+            const user = await User.find({username: username})
+            return res.status(200).json(user)
+        } else {
+            const users = await User.find()
+            return res.status(200).json(users)
+        }
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+const verifyUser = async (req, res) => {
+    try {
+        const { username, password } = req.body             
+        const user = await User.findOne({username: username})
+        console.log(username, password, "1111111" )
+        if (user) {
+            if (password === user.password){
+                return res.status(200).json(user)
+            } else {
+                throw Error(`Username and password are not matched!`)
+            }
+        } else {
+            throw Error(`${username} is not registed!`)
+        }
     } catch (error) {
         return res.status(500).send(error.message)
     }
@@ -93,6 +118,15 @@ const getUserById = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
         return res.status(200).json(user)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+const deleteUserById = async (req,res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.params.id)
+        return res.status(200).send(true)
     } catch (error) {
         return res.status(500).send(error.message)
     }
@@ -110,6 +144,24 @@ const createReview = async (req,res) => {
     }
 }
 
+const deleteReview = async (req,res) => {
+    try {
+        const { id, rid } = req.params
+        console.log(rid);
+        
+        const user = await User.findById(id)
+        console.log(user.reviews, 'Old Reviewsss')
+        const newReviews = user.reviews.filter((r) => r._id.toString() !== rid)
+        console.log(newReviews, ' Reviewsss 11111111111')
+        user.reviews = newReviews
+        console.log(user.reviews, 'New Reviewsss')
+        await user.save()
+        await Review.findByIdAndDelete(rid)
+        return res.status(200).send(true)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 const getReviewByUserId = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
@@ -153,7 +205,10 @@ module.exports = {
     createUser,
     getUsers,
     getUserById,
+    deleteUserById,
+    verifyUser,
     createReview,
+    deleteReview,
     getReviewByUserId,
     updateReview,
     gettAllReviews
