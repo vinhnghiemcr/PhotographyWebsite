@@ -24,7 +24,6 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
         // const response = await axios.get(`${BASE_URL}/users/verify`, { params: { user } }).then((response) => console.log(response))
         await axios.post(`${BASE_URL}/users/verify`, user)
         .then((res) => {
-            console.log(res, "Ressssssssssssssss")
             setCurrenttUser(res.data)
             navigate(-1)
          } )

@@ -34,6 +34,9 @@ router.post('/users/verify', controllers.verifyUser)
 router.get('/users/:id', controllers.getUserById)
 
 //get a user by id
+router.put('/users/:id', controllers.updateUserById)
+
+//get a user by id
 router.delete('/users/:id', controllers.deleteUserById)
 
 
@@ -51,5 +54,8 @@ router.put('/users/:id/reviews', controllers.updateReview)
 
 //get all reviews in the database
 router.get('/reviews', controllers.gettAllReviews)
+
+//Create a review of a user
+router.post('/receipts', controllers.createReceipt)
 
 module.exports = router;

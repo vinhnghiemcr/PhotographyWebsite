@@ -1,4 +1,4 @@
-const { User, Service, Package, Picture, Review } = require('../models/index')
+const { User, Service, Package, Picture, Review , Receipt} = require('../models/index')
 
 const getServices = async (req,res) => {
     try {
@@ -76,7 +76,9 @@ const createUser = async (req, res) => {
         if (availableName) {
             await user.save()
             return res.status(201).json(user)
-        } else res.status(401).send(`${user.username}' is not available. <br/> Please choose another username`)
+        } else {
+            res.send(`${user.username}' is not available. <br/> Please choose another username`)  
+        }
     } catch (error) {
         return res.status(500).send(error.message)
     }
@@ -120,6 +122,30 @@ const getUserById = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
         return res.status(200).json(user)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+const updateUserById = async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id)
+        const receipt = await new Receipt(req.body)
+        console.log(user, "USER");
+        console.log(receipt, "RECEIPT");
+        
+        
+        if (receipt) {
+            if (user.receipts ) {
+                user.receipts = [...user.receipts, receipt._id]
+            } else {
+                user.receipts = [ receipt._id]
+            }
+            await receipt.save()
+            await user.save()
+            return res.status(200).json(user)
+        }
+        
     } catch (error) {
         return res.status(500).send(error.message)
     }
@@ -193,6 +219,15 @@ const gettAllReviews = async (req,res) => {
         return res.status(500).send(error.message)
     }
 }
+const createReceipt = async (req,res) => {
+    try {
+        const receipt = await new Receipt(req.body)
+        await receipt.save()
+        return res.status(200).json(receipt)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 module.exports = {
     getServices,
@@ -203,11 +238,13 @@ module.exports = {
     createUser,
     getUsers,
     getUserById,
+    updateUserById,
     deleteUserById,
     verifyUser,
     createReview,
     deleteReview,
     getReviewByUserId,
     updateReview,
-    gettAllReviews
+    gettAllReviews,
+    createReceipt
 }

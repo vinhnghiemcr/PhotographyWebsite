@@ -9,7 +9,8 @@ const User = new Schema(
     loginCount: { type: Number,},
     packages: [{ type: Schema.Types.ObjectId, ref: 'Package'}],
     pictures: [{ type: Schema.Types.ObjectId, ref: 'Picture'}],
-    reviews: [{ type: Schema.Types.ObjectId, ref: 'Picture'}]
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review'}],
+    receipts: [{ type: Schema.Types.ObjectId, ref: 'Receipt'}],
   },
   { timestamps: true }
 )
