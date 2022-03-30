@@ -6,7 +6,7 @@ const User = new Schema(
     password: { type: String, required: true },
     displayName: { type: String, required: true},
     email: { type: String},
-    loginCount: { type: Number, required: true, max: 3},
+    loginCount: { type: Number,},
     packages: [{ type: Schema.Types.ObjectId, ref: 'Package'}],
     pictures: [{ type: Schema.Types.ObjectId, ref: 'Picture'}],
     reviews: [{ type: Schema.Types.ObjectId, ref: 'Picture'}]

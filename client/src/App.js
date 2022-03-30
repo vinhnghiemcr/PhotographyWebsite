@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage'
 import LoginPage from './pages/LoginPage'
 import ServicePage from './pages/ServicePage'
 import CollectionPage from './pages/ColectionPage'
+import UserPage from './pages/UserPage'
 
 import Nav from './components/Nav'
 import { useState, useEffect } from 'react'
@@ -29,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Nav cart={cart} />
+        <Nav cart={cart} currentuser={currentuser} setCurrenttUser={setCurrenttUser} />
       </header>
 
       <main>
@@ -40,6 +41,7 @@ function App() {
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser} />} />
           <Route path='service/:id' element={<ServicePage setCart={setCart} services={services}/>} />
+          <Route path='profile' element={<UserPage setCart={setCart} services={services}/>} />
 
         </Routes>
       </main>

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 
-const Nav = ({cart}) => {
+const Nav = ({cart, currentuser, setCurrenttUser}) => {
+
+  const logout = () => {
+    setCurrenttUser(null)
+  }
 
   return (
     <header className='nav'>
@@ -11,7 +15,12 @@ const Nav = ({cart}) => {
         <Link to='/about' className='glow-effect'>About</Link>
         <Link to='/contact' className='glow-effect'>Contact</Link>
         <Link to='' className='glow-effect'>Cart: {cart.packages.length + cart.pictures.length}</Link>
-        <Link to='login' className='glow-effect'>Login</Link>
+        { !currentuser ? 
+        <Link to='login' className='glow-effect'>Login</Link> 
+        :
+         <button className='glow-effect' onClick={logout} >Logout</button>
+        }
+        
       </nav>
     </header>
   )

@@ -1,9 +1,9 @@
 import { useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
-
-const SignUp = () => {
-    
+const SignUp = ({BASE_URL, setCurrenttUser}) => {
+    let navigate = useNavigate()
     const [newUser, setNewUser] = useState({
         username: '',
         password: '',
@@ -12,21 +12,24 @@ const SignUp = () => {
     
     
     const handleChange = (e) => {
-        console.log(e.target.name, e.target.value, "11111111");
         setNewUser({...newUser,  [e.target.name]: e.target.value })
     } 
 
-    const handleNewUser = async () => {
-        try {
-            const response = await axios.post(`/users`, newUser)
-            console.log(response.data, "222222222")        
-        } catch (error) {
-            console.log(error.message)
-        }  
+    const handleNewUser = async (e) => {
+        e.preventDefault()
+        console.log(newUser, "NEW")
+        const response = await axios.post(`${BASE_URL}/users`, newUser)
+        .then((res) => {
+            setCurrenttUser(res.data)
+            console.log(res, "RRESSSSSSSSSSSS")
+            navigate(-1)
+        })
+        .catch((e) => console.log(e))
+        // console.log(response.data, "222222222")        
     }
 
     return (
-        <div onSubmit={handleNewUser}>
+        <form onSubmit={handleNewUser}>
             <div className="input-container">
                 <label>Username: </label>
                 <input onChange={handleChange} type="text" name="username" value={newUser.username} required />
@@ -35,7 +38,7 @@ const SignUp = () => {
                 <label>Password: </label>
                 <input onChange={handleChange} type="password" name="password" value={newUser.password} required />
                 </div>
-                <div className="input-container">
+                <div cslassName="input-container">
                 <label>Re-Enter Password: </label>
                 <input type="password" name="pass2" required />
                 </div>
@@ -46,7 +49,7 @@ const SignUp = () => {
                 <div className="button-container">
                 <input type="submit" />
                 </div>
-        </div>
+        </form>
     )
 }
 

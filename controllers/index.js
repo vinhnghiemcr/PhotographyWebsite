@@ -67,7 +67,7 @@ const createUser = async (req, res) => {
         if (availableName) {
             await user.save()
             return res.status(201).json(user)
-        } else res.send(`'${user.username}' is not available. <br/> Please choose another username`)
+        } else res.status(401).send(`${user.username}' is not available. <br/> Please choose another username`)
     } catch (error) {
         return res.status(500).send(error.message)
     }
