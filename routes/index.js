@@ -9,8 +9,11 @@ router.get('/', (req, res) => res.send('This is root!'))
 //get all services in db
 router.get('/services', controllers.getServices)
 
-//get all package related to a paticular service id
+//get all packages related to a paticular service id
 router.get('/services/:id/packages', controllers.getPackagesByServiceId)
+
+//get all packages 
+router.get('/packages', controllers.getPackages)
 
 //get pictures by service id
 router.get('/services/:id/pictures', controllers.getPictureByServiceId)

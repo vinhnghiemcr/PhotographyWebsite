@@ -31,6 +31,15 @@ const getPackagesByServiceId = async (req,res) => {
     }
 }
 
+const getPackages = async (req, res) => {
+    try {
+        const packages = await Package.find()
+        return res.status(200).json(packages)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 const getPictureByServiceId = async (req,res) => {
     try {
         const service = await Service.findById(req.params.id)        
@@ -188,6 +197,7 @@ const gettAllReviews = async (req,res) => {
 module.exports = {
     getServices,
     getPackagesByServiceId,
+    getPackages,
     getPictureByServiceId,
     getCollectionPictures,
     createUser,

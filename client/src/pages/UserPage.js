@@ -10,7 +10,7 @@ const UserPage = ({cart, currentUser, setCurrenttUser}) => {
 
     return (
         <div>
-            Hello
+            {`Hello, ${currentUser.displayName}!`}<br />
             <button onClick={logout}>Logout</button>
         </div>
     )

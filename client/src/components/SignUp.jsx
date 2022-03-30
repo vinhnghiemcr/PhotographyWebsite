@@ -18,14 +18,13 @@ const SignUp = ({BASE_URL, setCurrenttUser}) => {
     const handleNewUser = async (e) => {
         e.preventDefault()
         console.log(newUser, "NEW")
-        const response = await axios.post(`${BASE_URL}/users`, newUser)
+        await axios.post(`${BASE_URL}/users`, newUser)
         .then((res) => {
             setCurrenttUser(res.data)
             console.log(res, "RRESSSSSSSSSSSS")
             navigate(-1)
         })
-        .catch((e) => console.log(e))
-        // console.log(response.data, "222222222")        
+        .catch((e) => console.log(e))                
     }
 
     return (
