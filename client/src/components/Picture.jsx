@@ -2,8 +2,6 @@
 
 
 const Picture = ({url, name, description, forSale, price}) => {
-    console.log(forSale, "FORSALE")
-
     return(
         <div >
             { !forSale ? (

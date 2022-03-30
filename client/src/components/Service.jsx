@@ -5,12 +5,6 @@ import Picture from "./Picture"
 
 const Service = ({id,name, description, packages, pictures}) => {
 
-    useEffect(()=>{
-        console.log(name, description, "SERVICE COMPONENT")
-    },[])
-
-   
-
     return (
         <div className="Service" >
             <Link to={`/service/${id}`} >

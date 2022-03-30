@@ -16,7 +16,6 @@ const getServices = async (req,res) => {
             }
             service.pictures = pictures
         }
-        
         return res.status(200).json(services)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -34,9 +33,7 @@ const getPackagesByServiceId = async (req,res) => {
 
 const getPictureByServiceId = async (req,res) => {
     try {
-        const service = await Service.findById(req.params.id)
-        console.log(service, "Service");
-        
+        const service = await Service.findById(req.params.id)        
         let pictures = []
         for await (const pic of service.pictures) {
             pictures.push(await Picture.findById(pic))
@@ -59,9 +56,7 @@ const getCollectionPictures = async (req,res) => {
 const createUser = async (req, res) => {
     try {
         const user = new User(req.body)
-        const users = await User.find()  
-        console.log(users, "USERSSSSSSSSSSSSSSSSSSSS");
-              
+        const users = await User.find()
         let availableName = true
         users.forEach((u) => {
             if (u.username === user.username) {
@@ -69,12 +64,10 @@ const createUser = async (req, res) => {
                 return availableName = false
             }
         })
-        
         if (availableName) {
             await user.save()
             return res.status(201).json(user)
         } else res.send(`'${user.username}' is not available. <br/> Please choose another username`)
-        
     } catch (error) {
         return res.status(500).send(error.message)
     }
@@ -99,7 +92,6 @@ const verifyUser = async (req, res) => {
     try {
         const { username, password } = req.body             
         const user = await User.findOne({username: username})
-        console.log(username, password, "1111111" )
         if (user) {
             if (password === user.password){
                 return res.status(200).json(user)
@@ -146,15 +138,10 @@ const createReview = async (req,res) => {
 
 const deleteReview = async (req,res) => {
     try {
-        const { id, rid } = req.params
-        console.log(rid);
-        
+        const { id, rid } = req.params        
         const user = await User.findById(id)
-        console.log(user.reviews, 'Old Reviewsss')
         const newReviews = user.reviews.filter((r) => r._id.toString() !== rid)
-        console.log(newReviews, ' Reviewsss 11111111111')
         user.reviews = newReviews
-        console.log(user.reviews, 'New Reviewsss')
         await user.save()
         await Review.findByIdAndDelete(rid)
         return res.status(200).send(true)
@@ -176,16 +163,16 @@ const getReviewByUserId = async (req,res) => {
 }
 
 const updateReview = async (req,res) => {
-    // try {
-    //     const user = await User.findById(req.params.id)
-    //     const reviews = []
-    //     for await (const review of user.reviews) {
-    //         reviews.push(await Review.findById(review))
-    //     }
-    //     return res.status(200).json(reviews)
-    // } catch (error) {
-    //     return res.status(500).send(error.message)
-    // }
+    try {
+        const user = await User.findById(req.params.id)
+        const reviews = []
+        for await (const review of user.reviews) {
+            reviews.push(await Review.findById(review))
+        }
+        return res.status(200).json(reviews)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
 }
 
 const gettAllReviews = async (req,res) => {

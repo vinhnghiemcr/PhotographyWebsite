@@ -15,9 +15,6 @@ const ServicePage = ({services, setCart}) => {
         setPictureOfService(service[0].pictures)     
     },[])
 
-    
-    // console.log(packages, '-----------');
-    
 
     return (
         <div>
