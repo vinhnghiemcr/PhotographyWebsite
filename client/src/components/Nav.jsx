@@ -10,7 +10,7 @@ const Nav = ({cart}) => {
         <Link to='/collection' className='glow-effect'>Collection</Link>
         <Link to='/about' className='glow-effect'>About</Link>
         <Link to='/contact' className='glow-effect'>Contact</Link>
-        <Link to='' className='glow-effect'>Cart: {cart.length}</Link>
+        <Link to='' className='glow-effect'>Cart: {cart.packages.length + cart.pictures.length}</Link>
         <Link to='login' className='glow-effect'>Login</Link>
       </nav>
     </header>

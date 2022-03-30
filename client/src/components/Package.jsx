@@ -3,7 +3,11 @@
 const Package = ({name, description, price, id, setCart}) => {
 
     const handleClick = () => {
-        setCart((cart) => [...cart, id])
+        setCart((cart) => {return {
+            packages : [...cart.packages, id],
+            pictures : [...cart.pictures]
+
+        }})
     }
 
     return (
@@ -11,7 +15,7 @@ const Package = ({name, description, price, id, setCart}) => {
             <h3>{name}</h3>
             <p>{description}</p>
             <h4>${price}</h4>
-            <button onClick={() => handleClick(id)}>Add</button>
+            <button onClick={handleClick}>Add</button>
         </div>
     )
 }
