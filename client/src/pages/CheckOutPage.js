@@ -13,6 +13,10 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
   
     let data = []
 
+    useEffect(() => {
+      setIsPaid(false)
+    }, [isPaid])
+
     useEffect( async () => {
         await axios.get(`${BASE_URL}/packages`)
         .then((res) => setPackages(res.data) )
@@ -93,7 +97,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
                 console.log(res, "RESPONSE");
                 setIsPaid(!isPaid)
                 setCart({packages: [], pictures: []})
-                setIsPaid(!isPaid)
+                
             })
             .catch((e) => console.log(e))
         } else {
@@ -107,7 +111,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
                 console.log(res, "RESPONSE");
                 setIsPaid(!isPaid)
                 setCart({packages: [], pictures: []})
-                setIsPaid(!isPaid)
+                
             })
             .catch((e) => console.log(e))
         }

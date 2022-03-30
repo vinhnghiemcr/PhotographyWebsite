@@ -141,9 +141,22 @@ const updateUserById = async (req,res) => {
             } else {
                 user.receipts = [ receipt._id]
             }
+            //add pictures to user DB
+            const pictures = receipt.items.data.filter((item) => item.forSale)
+            if (pictures) {
+                pictures.forEach((pic) =>{
+                    if (!user.pictures.includes(pic._id.toString())) {
+                        user.pictures.push(pic)
+                    }
+                }
+                )
+                
+            }
+            console.log(user.pictures, "pictures");
+            
             await receipt.save()
             await user.save()
-            return res.status(200).json(user)
+            return res.status(200).json(user.pictures)
         }
         
     } catch (error) {
