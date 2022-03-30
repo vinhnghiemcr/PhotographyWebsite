@@ -34,7 +34,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<HomePage BASE_URL={BASE_URL} services={services} />} />
-          <Route path='collection' element={<CollectionPage />} BASE_URL={BASE_URL} />
+          <Route path='collection' element={<CollectionPage BASE_URL={BASE_URL} />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage />} />

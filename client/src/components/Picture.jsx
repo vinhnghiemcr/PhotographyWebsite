@@ -1,7 +1,7 @@
 
 
 
-const Picture = ({url, name, description, forSale, price}) => {
+const Picture = ({url, name, description, forSale, price, location}) => {
     return(
         <div >
             { !forSale ? (
@@ -11,10 +11,11 @@ const Picture = ({url, name, description, forSale, price}) => {
             ) :
             (
                 <div className="picture">
-                    <img src="url" alt="collection photo" />
+                    <img src={url} alt="collection photo" />
                     <h3>{name}</h3>
+                    <h4>{location}</h4>
                     <p>{description}</p>
-                    <h3>Price: ${price}</h3>
+                    <h4>Price: ${price}</h4>
                 </div>
             )
             }
