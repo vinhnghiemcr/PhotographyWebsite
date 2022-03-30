@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
+import Review from "../components/Review"
 
-const UserPage = ({cart, currentUser, setCurrenttUser}) => {
+const UserPage = ({cart, currentUser, setCurrenttUser, BASE_URL}) => {
     let navigate = useNavigate()
 
     const logout = () => {
@@ -11,6 +12,7 @@ const UserPage = ({cart, currentUser, setCurrenttUser}) => {
     return (
         <div>
             {`Hello, ${currentUser.displayName}!`}<br />
+            <Review id={currentUser._id} BASE_URL={BASE_URL} />
             <button onClick={logout}>Logout</button>
         </div>
     )

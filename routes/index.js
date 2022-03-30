@@ -39,7 +39,6 @@ router.put('/users/:id', controllers.updateUserById)
 //get a user by id
 router.delete('/users/:id', controllers.deleteUserById)
 
-
 //Create a review of a user
 router.post('/users/:id/reviews', controllers.createReview)
 

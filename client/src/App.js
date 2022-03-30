@@ -43,7 +43,7 @@ function App() {
           <Route path='contact' element={<ContactPage />} />
           <Route path='login' element={<LoginPage BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser} />} />
           <Route path='service/:id' element={<ServicePage setCart={setCart} services={services}/>} />
-          <Route path='profile' element={<UserPage cart={cart} currentUser={currentUser} setCurrenttUser={setCurrenttUser} />} />
+          <Route path='profile'  element={<UserPage BASE_URL={BASE_URL} cart={cart} currentUser={currentUser} setCurrenttUser={setCurrenttUser} />} />
           <Route path='checkout' element={<CheckOutPage isPaid={isPaid} setIsPaid={setIsPaid}  cart={cart} setCart={setCart} currentUser={currentUser}  BASE_URL={BASE_URL} />} />
 
         </Routes>
