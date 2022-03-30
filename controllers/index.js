@@ -90,16 +90,17 @@ const getUsers = async (req,res) => {
 
 const verifyUser = async (req, res) => {
     try {
+        console.log(req, 'REQUESTTTTTTTT')
         const { username, password } = req.body             
         const user = await User.findOne({username: username})
         if (user) {
             if (password === user.password){
                 return res.status(200).json(user)
             } else {
-                throw Error(`Username and password are not matched!`)
+                return res.status(401).send(`Username and password are not matched!`)
             }
         } else {
-            throw Error(`${username} is not registed!`)
+            return res.status(401).send(`${username} is not registed!`)
         }
     } catch (error) {
         return res.status(500).send(error.message)

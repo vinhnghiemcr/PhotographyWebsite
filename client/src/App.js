@@ -18,6 +18,7 @@ function App() {
   const [currentuser, setCurrenttUser] = useState(null)
   const [services, setServices] = useState([])
   const [cart, setCart] = useState({packages: [], pictures: []})
+  console.log(currentuser, "CUSER");
   
   useEffect( async () => {
     const response = await axios.get(`${BASE_URL}/services`)
@@ -37,7 +38,7 @@ function App() {
           <Route path='collection' element={<CollectionPage BASE_URL={BASE_URL} setCart={setCart} />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage />} />
-          <Route path='login' element={<LoginPage />} />
+          <Route path='login' element={<LoginPage BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser} />} />
           <Route path='service/:id' element={<ServicePage setCart={setCart} services={services}/>} />
 
         </Routes>

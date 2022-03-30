@@ -25,7 +25,7 @@ router.post('/users', controllers.createUser)
 router.get('/users', controllers.getUsers)
 
 //Verify a user
-router.get('/users/verify', controllers.verifyUser)
+router.post('/users/verify', controllers.verifyUser)
 
 //get a user by id
 router.get('/users/:id', controllers.getUserById)

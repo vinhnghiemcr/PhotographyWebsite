@@ -10,8 +10,6 @@ const CollectionPage = ({BASE_URL, setCart}) => {
 
     useEffect(async () => {
         const response = await axios.get(`${BASE_URL}/collection/pictures`)
-        console.log(response.data, "PICTURE");
-        
         setPictures(response.data)
     }, [])
 

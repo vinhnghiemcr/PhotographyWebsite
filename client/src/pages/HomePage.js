@@ -2,8 +2,6 @@
 import Service from "../components/Service"
 
 const HomePage = ({ services }) => {
-console.log(services, "SERRRRRRRRRRRRRRR");
-
     
     return (
         <div>
