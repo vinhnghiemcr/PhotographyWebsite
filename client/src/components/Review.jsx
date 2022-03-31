@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import ReactStars from 'react-stars'
 
-const Review = ({ id, BASE_URL }) => {
+const Review = ({ id, BASE_URL, setReview }) => {
 
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
@@ -45,6 +45,7 @@ const Review = ({ id, BASE_URL }) => {
       });
     }
     saveReview()
+    setReview((c) => !c)
   }
 
   return (

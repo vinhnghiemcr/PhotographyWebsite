@@ -53,6 +53,19 @@ const getPictureByServiceId = async (req,res) => {
     }
 }
 
+const getPictureByUserId = async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id)        
+        let pictures = []
+        for await (const pic of user.pictures) {
+            pictures.push(await Picture.findById(pic))
+        }
+        return res.status(200).json(pictures)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 const getCollectionPictures = async (req,res) => {
     try {
         const pictures = await Picture.find({forSale: true})
@@ -69,7 +82,6 @@ const createUser = async (req, res) => {
         let availableName = true
         users.forEach((u) => {
             if (u.username === user.username) {
-                console.log(u.username)                
                 return availableName = false
             }
         })
@@ -101,7 +113,6 @@ const getUsers = async (req,res) => {
 
 const verifyUser = async (req, res) => {
     try {
-        console.log(req, 'REQUESTTTTTTTT')
         const { username, password } = req.body             
         const user = await User.findOne({username: username})
         if (user) {
@@ -131,10 +142,6 @@ const updateUserById = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
         const receipt = await new Receipt(req.body)
-        console.log(user, "USER");
-        console.log(receipt, "RECEIPT");
-        
-        
         if (receipt) {
             if (user.receipts ) {
                 user.receipts = [...user.receipts, receipt._id]
@@ -152,8 +159,6 @@ const updateUserById = async (req,res) => {
                 )
                 
             }
-            console.log(user.pictures, "pictures");
-            
             await receipt.save()
             await user.save()
             return res.status(200).json(user.pictures)
@@ -247,6 +252,7 @@ module.exports = {
     getPackagesByServiceId,
     getPackages,
     getPictureByServiceId,
+    getPictureByUserId,
     getCollectionPictures,
     createUser,
     getUsers,

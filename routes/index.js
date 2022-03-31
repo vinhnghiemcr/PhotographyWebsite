@@ -18,6 +18,9 @@ router.get('/packages', controllers.getPackages)
 //get pictures by service id
 router.get('/services/:id/pictures', controllers.getPictureByServiceId)
 
+//get pictures by user id
+router.get('/users/:id/pictures', controllers.getPictureByUserId)
+
 //get all picture of the collection
 router.get('/collection/pictures', controllers.getCollectionPictures)
 
@@ -42,7 +45,7 @@ router.delete('/users/:id', controllers.deleteUserById)
 //Create a review of a user
 router.post('/users/:id/reviews', controllers.createReview)
 
-//Create a review of a user
+//Delete a review of a user
 router.delete('/users/:id/reviews/:rid', controllers.deleteReview)
 
 //get all reviews of a user
