@@ -39,7 +39,7 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
             {currentUser && 
             <div>
                 <nav>
-                    <h3>Wellcome back, {currentUser.displayName}!</h3>
+                    <h3>Hello, {currentUser.displayName}!</h3>
                     { !review && <button onClick={toggleReview}>Write A Review</button>}
                     <button onClick={logout}>Logout</button>
                     <button onClick={deleteAccount}>Delete Account</button>

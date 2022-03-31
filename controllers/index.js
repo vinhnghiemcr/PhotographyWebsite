@@ -89,7 +89,7 @@ const createUser = async (req, res) => {
             await user.save()
             return res.status(201).json(user)
         } else {
-            res.send(`${user.username}' is not available. <br/> Please choose another username`)  
+            res.status(401).send(`${user.username}' is not available. <br/> Please choose another username`)  
         }
     } catch (error) {
         return res.status(500).send(error.message)
@@ -119,10 +119,10 @@ const verifyUser = async (req, res) => {
             if (password === user.password){
                 return res.status(200).json(user)
             } else {
-                return res.status(401).send(`Username and password are not matched!`)
+                return res.send(`Username and password are not matched!`)
             }
         } else {
-            return res.status(401).send(`${username} is not registed!`)
+            return res.send(`${username} is not registed!`)
         }
     } catch (error) {
         return res.status(500).send(error.message)

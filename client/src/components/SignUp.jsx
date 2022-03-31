@@ -2,29 +2,36 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
-const SignUp = ({BASE_URL, setCurrenttUser}) => {
+const SignUp = ({BASE_URL, setCurrenttUser, error, setError}) => {
     let navigate = useNavigate()
     const [newUser, setNewUser] = useState({
         username: '',
         password: '',
         displayName: '',
     })
+    const [rePassword, setRePasswork ] = useState('')
+    
     
     
     const handleChange = (e) => {
         setNewUser({...newUser,  [e.target.name]: e.target.value })
     } 
 
+    const rePasswordChange = (e) => {
+        setRePasswork(e.target.value)
+    } 
+
     const handleNewUser = async (e) => {
         e.preventDefault()
-        console.log(newUser, "NEW")
-        await axios.post(`${BASE_URL}/users`, newUser)
-        .then((res) => {
-            setCurrenttUser(res.data)
-            console.log(res, "RRESSSSSSSSSSSS")
-            navigate(-1)
-        })
-        .catch((e) => console.log(e))                
+        if (rePassword === newUser.password){
+            await axios.post(`${BASE_URL}/users`, newUser)
+            .then((res) => {
+                    setError('')
+                    setCurrenttUser(res.data)
+                    navigate('/profile')
+            })
+            .catch((e) => setError(`${newUser.username} is not available. Please choose another username!`))
+        } else {setError('Password must matched!')}
     }
 
     return (
@@ -39,7 +46,7 @@ const SignUp = ({BASE_URL, setCurrenttUser}) => {
                 </div>
                 <div cslassName="input-container">
                 <label>Re-Enter Password: </label>
-                <input type="password" name="pass2" required />
+                <input onChange={rePasswordChange} type="password"  name="rePassword" value={rePassword} required  />
                 </div>
                 <div className="input-container">
                 <label>Display Name: </label>
@@ -47,7 +54,8 @@ const SignUp = ({BASE_URL, setCurrenttUser}) => {
                 </div>
                 <div className="button-container">
                 <input type="submit" />
-                </div>
+            </div>
+            {error && <p>{error}</p>}
         </form>
     )
 }

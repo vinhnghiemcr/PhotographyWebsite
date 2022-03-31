@@ -12,22 +12,27 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
         username: '',
         password: ''
     })
-
+    const [error, setError ] = useState('')
+    
     const handleChange = (e) => {  
         setUser({...user,  [e.target.name]: e.target.value })
     } 
 
     const handleSubmmit = async (e) => {
-        e.preventDefault()
-        console.log(user, "111111111")
+        e.preventDefault()        
         
-        // const response = await axios.get(`${BASE_URL}/users/verify`, { params: { user } }).then((response) => console.log(response))
         await axios.post(`${BASE_URL}/users/verify`, user)
         .then((res) => {
-            setCurrenttUser(res.data)
-            navigate(-1)
+            if (typeof res.data === 'object') {
+                setError('')
+                setCurrenttUser(res.data)
+                navigate('/profile')
+                
+            } else {
+                setError(res.data)
+            }            
          } )
-        .catch((e) => console.log(e, "ERRRRR"))
+        .catch((e) => console.log(e))
     }
     const handleClick = () => {
         setIsSignUp(!isSignUp)
@@ -41,11 +46,12 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
                         handleChange={handleChange}
                         handleSubmmit={handleSubmmit}
                     />
+                    {error && <p>{error}</p>}
                     <button onClick={handleClick}>Sign Up</button>
                 </div>)            
             :
                 (<div>
-                    <SignUp BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  />
+                    <SignUp error={error} setError={setError} BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  />
                     <button onClick={handleClick}>Login</button>
                 </div>)
             }
