@@ -19,15 +19,13 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
     } 
 
     const handleSubmmit = async (e) => {
-        e.preventDefault()        
-        
+        e.preventDefault()  
         await axios.post(`${BASE_URL}/users/verify`, user)
         .then((res) => {
             if (typeof res.data === 'object') {
                 setError('')
                 setCurrenttUser(res.data)
-                navigate('/profile')
-                
+                navigate('/profile')                
             } else {
                 setError(res.data)
             }            
@@ -37,7 +35,6 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
     const handleClick = () => {
         setIsSignUp(!isSignUp)
     }
-
     return (
         <div>
             {!isSignUp ? (<div >
