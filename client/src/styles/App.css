@@ -205,17 +205,28 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
-.rainbow-text {
-  /* background-image: linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  ); */
-  
-  color: transparent;
+.dialog {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  display: block;
+  margin: 0;
+}
+.dialog img {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.dialog h3, .dialog h4 {
+  text-align: center;
+  background-color: transparent;
+  color: #A65D56;
 }

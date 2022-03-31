@@ -16,14 +16,13 @@ const Service = ({id,name, description, packages, pictures}) => {
             <section className="service-picture-container" >
                 {pictures.map((picture) => 
                 <Picture 
-                
-                key={picture._id}
-                name={picture.name}
-                description={picture.description}
-                location={picture.location}
-                url={picture.url}
-                forSale={picture.forSale}
-                price={picture.price}
+                    key={picture._id}
+                    name={picture.name}
+                    description={picture.description}
+                    location={picture.location}
+                    url={picture.url}
+                    forSale={picture.forSale}
+                    price={picture.price}
                 />)}
             </section>
 
