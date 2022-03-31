@@ -4,7 +4,7 @@ import Service from "../components/Service"
 const HomePage = ({ services }) => {
     
     return (
-        <div>
+        <div className="service-container">
             {
             services.map((service) => 
             <Service key={service._id} id={service._id}

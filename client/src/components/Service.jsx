@@ -6,7 +6,7 @@ import Picture from "./Picture"
 const Service = ({id,name, description, packages, pictures}) => {
 
     return (
-        <div className="Service" >
+        <div className="service" >
             <Link to={`/service/${id}`} >
                 <h3>{name}</h3>
             </Link>

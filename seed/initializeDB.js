@@ -41,7 +41,7 @@ const main = async () => {
     
     const f2 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH2.jpg?raw=true",
             forSale: false
         }
     )
@@ -49,7 +49,7 @@ const main = async () => {
 
     const f3 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH3.jpg?raw=true",
             forSale: false
         }
     )
@@ -57,7 +57,7 @@ const main = async () => {
     
     const f4 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH4.jpg?raw=true",
             forSale: false
         }
     )
@@ -65,7 +65,7 @@ const main = async () => {
 
     const f5 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH5.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH5.jpg?raw=true",
             forSale: false
         }
     )
@@ -73,7 +73,7 @@ const main = async () => {
     
     const f6 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH6.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH6.jpg?raw=true",
             forSale: false
         }
     )
@@ -81,7 +81,7 @@ const main = async () => {
 
     const f7 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH7.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH7.jpg?raw=true",
             forSale: false
         }
     )
@@ -89,7 +89,7 @@ const main = async () => {
     
     const f8 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH8.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH8.jpg?raw=true",
             forSale: false
         }
     )
@@ -97,7 +97,7 @@ const main = async () => {
 
     const f9 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV1.jpg?raw=true",
             forSale: false
         }
     )
@@ -105,7 +105,7 @@ const main = async () => {
     
     const f10 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV2.jpg?raw=true",
             forSale: false
         }
     )
@@ -156,7 +156,7 @@ const main = async () => {
 
     const p1 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH1.jpg?raw=true",
             forSale: false
         }
     )
@@ -164,7 +164,7 @@ const main = async () => {
     
     const p2 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH2.jpg?raw=true",
             forSale: false
         }
     )
@@ -172,7 +172,7 @@ const main = async () => {
 
     const p3 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH3.jpg?raw=true",
             forSale: false
         }
     )
@@ -180,7 +180,7 @@ const main = async () => {
     
     const p4 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH4.jpg?raw=true",
             forSale: false
         }
     )
@@ -188,7 +188,7 @@ const main = async () => {
 
     const p5 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH5.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH5.jpg?raw=true",
             forSale: false
         }
     )
@@ -196,7 +196,7 @@ const main = async () => {
     
     const p6 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH6.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH6.jpg?raw=true",
             forSale: false
         }
     )
@@ -204,7 +204,7 @@ const main = async () => {
 
     const p7 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH7.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH7.jpg?raw=true",
             forSale: false
         }
     )
@@ -212,7 +212,7 @@ const main = async () => {
     
     const p8 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH8.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH8.jpg?raw=true",
             forSale: false
         }
     )
@@ -220,7 +220,7 @@ const main = async () => {
 
     const p9 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH9.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH9.jpg?raw=true",
             forSale: false
         }
     )
@@ -228,7 +228,7 @@ const main = async () => {
     
     const p10 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH10.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH10.jpg?raw=true",
             forSale: false
         }
     )
@@ -236,7 +236,7 @@ const main = async () => {
 
     const p11 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH11.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH11.jpg?raw=true",
             forSale: false
         }
     )
@@ -244,7 +244,7 @@ const main = async () => {
 
     const p12 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH12.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PH12.jpg?raw=true",
             forSale: false
         }
     )
@@ -252,7 +252,7 @@ const main = async () => {
 
     const p13 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV1.jpg?raw=true",
             forSale: false
         }
     )
@@ -260,7 +260,7 @@ const main = async () => {
 
     const p14 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV2.jpg?raw=true",
             forSale: false
         }
     )
@@ -268,7 +268,7 @@ const main = async () => {
 
     const p15 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV3.jpg?raw=true",
             forSale: false
         }
     )
@@ -276,7 +276,7 @@ const main = async () => {
 
     const p16 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV4.jpg?raw=true",
             forSale: false
         }
     )
@@ -284,7 +284,7 @@ const main = async () => {
 
     const p17 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV5.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV5.jpg?raw=true",
             forSale: false
         }
     )
@@ -292,7 +292,7 @@ const main = async () => {
 
     const p18 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV6.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV6.jpg?raw=true",
             forSale: false
         }
     )
@@ -300,7 +300,7 @@ const main = async () => {
 
     const p19 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV7.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV7.jpg?raw=true",
             forSale: false
         }
     )
@@ -308,7 +308,7 @@ const main = async () => {
 
     const p20 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV8.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV8.jpg?raw=true",
             forSale: false
         }
     )
@@ -316,7 +316,7 @@ const main = async () => {
 
     const p21 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV9.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV9.jpg?raw=true",
             forSale: false
         }
     )
@@ -324,7 +324,7 @@ const main = async () => {
 
     const p22 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV10.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV10.jpg?raw=true",
             forSale: false
         }
     )
@@ -373,7 +373,7 @@ const main = async () => {
 
     const g1 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH1.jpg?raw=true",
             forSale: false
         }
     )
@@ -381,7 +381,7 @@ const main = async () => {
     
     const g2 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH2.jpg?raw=true",
             forSale: false
         }
     )
@@ -389,7 +389,7 @@ const main = async () => {
 
     const g3 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH3.jpg?raw=true",
             forSale: false
         }
     )
@@ -397,7 +397,7 @@ const main = async () => {
     
     const g4 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GH4.jpg?raw=true",
             forSale: false
         }
     )
@@ -405,7 +405,7 @@ const main = async () => {
 
     const g5 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV1.jpg?raw=true",
             forSale: false
         }
     )
@@ -413,7 +413,7 @@ const main = async () => {
     
     const g6 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV2.jpg?raw=true",
             forSale: false
         }
     )
@@ -421,7 +421,7 @@ const main = async () => {
 
     const g7 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV3.jpg?raw=true",
             forSale: false
         }
     )
@@ -429,7 +429,7 @@ const main = async () => {
     
     const g8 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV4.jpg?raw=true",
             forSale: false
         }
     )
@@ -437,7 +437,7 @@ const main = async () => {
 
     const g9 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV5.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV5.jpg?raw=true",
             forSale: false
         }
     )
@@ -445,7 +445,7 @@ const main = async () => {
     
     const g10 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV6.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/graduation/GV6.jpg?raw=true",
             forSale: false
         }
     )
@@ -494,7 +494,7 @@ const main = async () => {
 
     const n1 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH1.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH1.jpg?raw=true",
             forSale: false
         }
     )
@@ -502,7 +502,7 @@ const main = async () => {
     
     const n2 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH2.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH2.jpg?raw=true",
             forSale: false
         }
     )
@@ -510,7 +510,7 @@ const main = async () => {
 
     const n3 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH3.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH3.jpg?raw=true",
             forSale: false
         }
     )
@@ -518,7 +518,7 @@ const main = async () => {
     
     const n4 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH4.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH4.jpg?raw=true",
             forSale: false
         }
     )
@@ -526,7 +526,7 @@ const main = async () => {
 
     const n5 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH5.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH5.jpg?raw=true",
             forSale: false
         }
     )
@@ -534,7 +534,7 @@ const main = async () => {
     
     const n6 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH6.jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/newborn/NH6.jpg?raw=true",
             forSale: false
         }
     )
@@ -559,7 +559,7 @@ const main = async () => {
             name: "Lanikai Beach ",
             description: "Jan 2021",
             location: "Oahu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(1).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(1).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -571,7 +571,7 @@ const main = async () => {
             name: "Ho'omaluhia Botanical Garden",
             description: "Jan 2021",
             location: "Oahu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(2).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(2).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -583,7 +583,7 @@ const main = async () => {
             name: "Boston Public Library",
             description: "May 2018",
             location: "Boston, MA",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(3).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(3).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -595,7 +595,7 @@ const main = async () => {
             name: "Light House",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(4).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(4).jpg?raw=true",
             forSale: true,
             price: 10
         }
@@ -607,7 +607,7 @@ const main = async () => {
             name: "911 Memorial",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(5).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(5).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -619,7 +619,7 @@ const main = async () => {
             name: "Brooklyn Bridge",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(6).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(6).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -631,7 +631,7 @@ const main = async () => {
             name: "Lone New Yorker",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(7).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(7).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -643,7 +643,7 @@ const main = async () => {
             name: "New York by Night",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(8).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(8).jpg?raw=true",
             forSale: true,
             price: 10
         }
@@ -655,7 +655,7 @@ const main = async () => {
             name: "Brooklyn Bridge by Night",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(9).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(9).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -667,7 +667,7 @@ const main = async () => {
             name: "Brooklyn Bridge Black & White",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(10).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(10).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -679,7 +679,7 @@ const main = async () => {
             name: "Statue of Liberty",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(11).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(11).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -691,7 +691,7 @@ const main = async () => {
             name: "Empire State Building",
             description: "March 2018",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(12).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(12).jpg?raw=true",
             forSale: true,
             price: 10
         }
@@ -703,7 +703,7 @@ const main = async () => {
             name: "Niagara Falls",
             description: "May 2017",
             location: "Buffalo, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(13).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(13).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -715,7 +715,7 @@ const main = async () => {
             name: "Niagara Falls from Bridge",
             description: "May 2017",
             location: "New York, NY",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(14).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(14).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -727,7 +727,7 @@ const main = async () => {
             name: "Windmill Farm",
             description: "April 2019",
             location: "Sweetwaater, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(15).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(15).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -739,7 +739,7 @@ const main = async () => {
             name: "Windmill",
             description: "April 2019",
             location: "Sweetwater, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(16).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(16).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -751,7 +751,7 @@ const main = async () => {
             name: "Garden of Gods",
             description: "Nov 2020",
             location: "Colorado Springs, CO",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(17).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(17).jpg?raw=true",
             forSale: true,
             price: 10
         }
@@ -763,7 +763,7 @@ const main = async () => {
             name: "Sand Beach",
             description: "Jan 2021",
             location: "Oahu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(18).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(18).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -775,7 +775,7 @@ const main = async () => {
             name: "Beach of Love",
             description: "Aug 2019",
             location: "Alamogordo, NM",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(19).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(19).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -787,7 +787,7 @@ const main = async () => {
             name: "Gate of Heaven",
             description: "Aug 2019",
             location: "Alamogordo, NM",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(20).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(20).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -799,7 +799,7 @@ const main = async () => {
             name: "White Sand",
             description: "Aug 2019",
             location: "Alamogordo, NM",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(21).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(21).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -811,7 +811,7 @@ const main = async () => {
             name: "Nature",
             description: "Aug 2019",
             location: "Alamogordo, NM",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(22).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(22).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -823,7 +823,7 @@ const main = async () => {
             name: "Top of Honolulu",
             description: "Jan 2021",
             location: "Honolulu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(23).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(23).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -835,7 +835,7 @@ const main = async () => {
             name: "Spring Rider",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(24).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(24).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -847,7 +847,7 @@ const main = async () => {
             name: "Texas Teach University in Spring",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(25).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(25).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -859,7 +859,7 @@ const main = async () => {
             name: "Texas Teach University Campus",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(26).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(26).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -871,7 +871,7 @@ const main = async () => {
             name: "Spring on Campus",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(27).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(27).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -883,7 +883,7 @@ const main = async () => {
             name: "Winter Is Coming",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(28).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(28).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -895,7 +895,7 @@ const main = async () => {
             name: "Winter Rider",
             description: "March 2019",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(29).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(29).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -907,7 +907,7 @@ const main = async () => {
             name: "Hanauma Bay",
             description: "Jan 2021",
             location: "Honolulu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(30).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(30).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -919,7 +919,7 @@ const main = async () => {
             name: "Moutain View",
             description: "Jan 2021",
             location: "Honolulu, HI",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(31).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(31).jpg?raw=true",
             forSale: true,
             price: 5
         }
@@ -931,7 +931,7 @@ const main = async () => {
             name: "Wonderland",
             description: "Nov 2021",
             location: "Lubbock, TX",
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(32).jpg",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(32).jpg?raw=true",
             forSale: true,
             price: 5
         }
