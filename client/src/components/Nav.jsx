@@ -19,7 +19,7 @@ const Nav = ({cart, currentUser, setCurrenttUser}) => {
         { !currentUser ? 
         <Link to='login' className='glow-effect'>Login</Link> 
         :
-        <Link to='profile' className='glow-effect' ><GoPerson /></Link>
+        <Link to='profile' className='glow-effect' ><GoPerson className='person'/></Link>
         }
         
       </nav>

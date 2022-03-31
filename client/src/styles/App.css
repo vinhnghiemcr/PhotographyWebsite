@@ -131,7 +131,7 @@ img {
 
 input[type="text"],
 input[type="password"] {
-  color: black;
+  color:#D9ACA3;
   height: 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -229,4 +229,33 @@ input[type="submit"]:hover {
   text-align: center;
   background-color: transparent;
   color: #A65D56;
+}
+
+.user-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-nav h3 {
+  color:#789EBF;
+  font-weight: 300;
+}
+
+.review h3 {
+  color: #A65D56;
+  margin-left: 20px;
+}
+.review textarea {
+  display: block;
+  color: #D9ACA3;
+}
+.person {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }

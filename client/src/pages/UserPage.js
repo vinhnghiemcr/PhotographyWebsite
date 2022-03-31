@@ -38,14 +38,16 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
         <div>
             {currentUser && 
             <div>
-                <nav>
+                <nav className="user-nav">
                     <h3>Hello, {currentUser.displayName}!</h3>
-                    { !review && <button onClick={toggleReview}>Write A Review</button>}
-                    <button onClick={logout}>Logout</button>
-                    <button onClick={deleteAccount}>Delete Account</button>
+                    <div>
+                        { !review && <button onClick={toggleReview}>Write A Review</button>}
+                        <button onClick={logout}>Logout</button>
+                        <button onClick={deleteAccount}>Delete Account</button>
+                    </div>
                 </nav>
-                {review &&<Review id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
-                <div className="pictures-container">
+                {review &&<Review currentUser={currentUser} id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
+                <div className="user-container">
                     {userPictures && userPictures.map((picture) =>
                         <Picture 
                         owned={owned}
