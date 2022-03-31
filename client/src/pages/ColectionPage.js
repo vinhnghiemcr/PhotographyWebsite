@@ -3,7 +3,7 @@ import axios from "axios"
 import Picture from "../components/Picture"
 import Search from "../components/Search"
 
-const CollectionPage = ({BASE_URL, setCart}) => {
+const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const [pictures, setPictures] = useState([])
     const [serchResults, setSerchResults] = useState([])
@@ -11,6 +11,7 @@ const CollectionPage = ({BASE_URL, setCart}) => {
     useEffect(async () => {
         const response = await axios.get(`${BASE_URL}/collection/pictures`)
         setPictures(response.data)
+        setOwned(false)
     }, [])
 
     return (
@@ -19,6 +20,7 @@ const CollectionPage = ({BASE_URL, setCart}) => {
             {pictures.map((picture) => 
                 <div>
                     <Picture 
+                    owned={owned}
                     key={picture._id}
                     name={picture.name}
                     description={picture.description}

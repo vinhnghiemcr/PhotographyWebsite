@@ -4,7 +4,7 @@ import Picture from "../components/Picture"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const UserPage = ({cart, currentUser, setCurrenttUser, BASE_URL}) => {
+const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => {
     let navigate = useNavigate()
     const [userPictures, setUserPictures] = useState(null)
     const [review, setReview] = useState(false)
@@ -13,6 +13,7 @@ const UserPage = ({cart, currentUser, setCurrenttUser, BASE_URL}) => {
         await axios.get(`${BASE_URL}/users/${currentUser._id}/pictures`)
         .then((res) => setUserPictures(res.data)  )
         .catch((e) => console.log(e))
+        setOwned(true)
     }, [])
     const logout = () => {
         setCurrenttUser(null)
@@ -33,30 +34,35 @@ const UserPage = ({cart, currentUser, setCurrenttUser, BASE_URL}) => {
     }
 
     return (
+        
         <div>
-            {`Hello, ${currentUser.displayName}!`}<br />
-            
-            <div className="pictures-container">
-                {userPictures && userPictures.map((picture) =>
-                    <Picture 
-                    key={picture._id}
-                    name={picture.name}
-                    description={picture.description}
-                    location={picture.location}
-                    url={picture.url}
-                    forSale={picture.forSale}
-                    price={picture.price}
-                    />
-                )}
+            {currentUser && 
+            <div>
+                <nav>
+                    <h3>Wellcome back, {currentUser.displayName}!</h3>
+                    { !review && <button onClick={toggleReview}>Write A Review</button>}
+                    <button onClick={logout}>Logout</button>
+                    <button onClick={deleteAccount}>Delete Account</button>
+                </nav>
+                {review &&<Review id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
+                <div className="pictures-container">
+                    {userPictures && userPictures.map((picture) =>
+                        <Picture 
+                        owned={owned}
+                        key={picture._id}
+                        name={picture.name}
+                        description={picture.description}
+                        location={picture.location}
+                        url={picture.url}
+                        forSale={picture.forSale}
+                        price={picture.price}
+                        />
+                    )}
+                </div>
             </div>
-            <section>
-                { !review ? <button onClick={toggleReview}>Write A Review</button> : 
-                <Review id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
-            </section>
-
-            <button onClick={logout}>Logout</button>
-            <button onClick={deleteAccount}>Delete Account</button>
+            }         
         </div>
+    
     )
 }
 export default UserPage

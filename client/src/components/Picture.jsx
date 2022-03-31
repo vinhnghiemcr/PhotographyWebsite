@@ -1,7 +1,7 @@
 
 
 
-const Picture = ({url, name, description, forSale, price, location, setCart, id}) => {
+const Picture = ({url, owned, name, description, forSale, price, location, setCart, id}) => {
 
     const handleClick = () => {
         setCart((cart) => {return {
@@ -24,7 +24,7 @@ const Picture = ({url, name, description, forSale, price, location, setCart, id}
                     <h4>{location}</h4>
                     <p>{description}</p>
                     <h4>Price: ${price}</h4>
-                    <button onClick={handleClick}>Add</button>
+                    {!owned && <button onClick={handleClick}>Add</button>}
                 </div>
             )
             }
