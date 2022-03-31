@@ -11,7 +11,7 @@ const Package = ({name, description, price, id, setCart}) => {
     }
 
     return (
-        <div>
+        <div className="package">
             <h3>{name}</h3>
             <p>{description}</p>
             <h4>${price}</h4>

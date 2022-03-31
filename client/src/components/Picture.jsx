@@ -11,7 +11,7 @@ const Picture = ({url, owned, name, description, forSale, price, location, setCa
         }})
     }
     return(
-        <div >
+        <div className="picture-card" >
             { !forSale ? (
                 <div className="picture">
                     <img src={url} alt="photo" />

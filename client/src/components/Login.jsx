@@ -1,6 +1,6 @@
 
 
-const Login = ({user, handleChange, handleSubmmit}) => {
+const Login = ({user, handleChange, handleSubmmit, handleClick}) => {
  
 
     return (
@@ -13,8 +13,11 @@ const Login = ({user, handleChange, handleSubmmit}) => {
                 <label>Password: </label>
                 <input onChange={handleChange} type="password" name="password" value={user.password} required />
                 </div>
-                <div className="button-container">
-                <input type="submit"/>
+                <div >
+                <input type="submit" className="button-container"/>
+                </div>
+                <div>
+                <button className="login-button" onClick={handleClick}>Login</button>
                 </div>
         </form>
     )

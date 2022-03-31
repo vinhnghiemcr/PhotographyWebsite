@@ -17,8 +17,8 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
     return (
         <div>
             <Search />
-            {pictures.map((picture) => 
-                <div>
+            <section className="collection-container">
+                {pictures.map((picture) => 
                     <Picture 
                     owned={owned}
                     key={picture._id}
@@ -31,8 +31,8 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
                     id={picture._id}
                     setCart={setCart}
                     />
-                </div>
-            )}
+                )}
+            </section>
         </div>
     )
 }

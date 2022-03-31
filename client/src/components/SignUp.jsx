@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
-const SignUp = ({BASE_URL, setCurrenttUser, error, setError}) => {
+const SignUp = ({BASE_URL, setCurrenttUser, error, setError, handleClick}) => {
     let navigate = useNavigate()
     const [newUser, setNewUser] = useState({
         username: '',
@@ -37,23 +37,26 @@ const SignUp = ({BASE_URL, setCurrenttUser, error, setError}) => {
     return (
         <form onSubmit={handleNewUser}>
             <div className="input-container">
-                <label>Username: </label>
-                <input onChange={handleChange} type="text" name="username" value={newUser.username} required />
-                </div>
-                <div className="input-container">
-                <label>Password: </label>
-                <input onChange={handleChange} type="password" name="password" value={newUser.password} required />
-                </div>
-                <div cslassName="input-container">
-                <label>Re-Enter Password: </label>
-                <input onChange={rePasswordChange} type="password"  name="rePassword" value={rePassword} required  />
-                </div>
-                <div className="input-container">
-                <label>Display Name: </label>
-                <input onChange={handleChange} type="text" name="displayName" value={newUser.displayName} required />
-                </div>
-                <div className="button-container">
-                <input type="submit" />
+            <label>Username: </label>
+            <input onChange={handleChange} type="text" name="username" value={newUser.username} required />
+            </div>
+            <div className="input-container">
+            <label>Password: </label>
+            <input onChange={handleChange} type="password" name="password" value={newUser.password} required />
+            </div>
+            <div className="input-container">
+            <label>Re-Enter Password: </label>
+            <input onChange={rePasswordChange} type="password"  name="rePassword" value={rePassword} required  />
+            </div>
+            <div className="input-container">
+            <label>Display Name: </label>
+            <input onChange={handleChange} type="text" name="displayName" value={newUser.displayName} required />
+            </div>
+            <div className="button-container">
+            <input type="submit" />
+            </div>
+            <div className="button-container">
+            <button className="login-button" onClick={handleClick}>Login</button>
             </div>
             {error && <p>{error}</p>}
         </form>

@@ -37,19 +37,19 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
     }
     return (
         <div>
-            {!isSignUp ? (<div >
+            {!isSignUp ? 
+                (<div >
                     <Login 
                         user={user}
                         handleChange={handleChange}
                         handleSubmmit={handleSubmmit}
+                        handleClick={handleClick}
                     />
                     {error && <p>{error}</p>}
-                    <button onClick={handleClick}>Sign Up</button>
                 </div>)            
             :
                 (<div>
-                    <SignUp error={error} setError={setError} BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  />
-                    <button onClick={handleClick}>Login</button>
+                    <SignUp handleClick={handleClick} error={error} setError={setError} BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  /> 
                 </div>)
             }
         </div>

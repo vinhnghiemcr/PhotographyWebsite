@@ -8,7 +8,7 @@ const Search = (props) => {
         type="text"
         name="search"
         value={props.value}
-        placeholder="Search Games"
+        placeholder="Search Pictures"
         onChange={props.onChange}
 
       ></input>
