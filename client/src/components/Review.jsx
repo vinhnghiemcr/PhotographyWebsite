@@ -45,8 +45,8 @@ const Review = ({currentUser, id, BASE_URL, setReview }) => {
 
   return (
     <div className='review'>
-      <h3>Leave Us A Review!</h3>
       <form onSubmit={postReview}>
+        <h3>Leave Us A Review!</h3>
         <ReactStars  count={5}  value={rating}  onChange={saveRating} size={24} color2={'#ffd700'} />
         <textarea name="Text1" type="text" cols="40" placeholder='Leave us a comment' rows="5" value={comment} onChange={saveComment} required />
         <button>Submit</button>

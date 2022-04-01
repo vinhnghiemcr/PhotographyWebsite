@@ -48,7 +48,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
         return result
     }
 
-    const getNameAndPrice = () => {
+    const createReceiptData = () => {
         for (let i = 0; i< sortedPackages.length; i++) {
           if (i == 0) {
             data.push({...getPackageData(sortedPackages[i]), count: 1})
@@ -68,7 +68,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
             }
         }
     }
-    getNameAndPrice()
+    createReceiptData()
     
 
     const generateReciept = () => {
@@ -96,8 +96,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
             .then((res) =>  {
                 console.log(res, "RESPONSE");
                 setIsPaid(!isPaid)
-                setCart({packages: [], pictures: []})
-                
+                setCart({packages: [], pictures: []})                
             })
             .catch((e) => console.log(e))
         } else {
@@ -118,7 +117,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
     }
 
     return (
-        <div className="Receipt">
+        <div className="receipt">
             <h1>Receipt Summary</h1>
             { generateReciept()}
             {isPaid ? 

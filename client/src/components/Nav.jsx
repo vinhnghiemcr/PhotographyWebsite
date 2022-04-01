@@ -15,7 +15,7 @@ const Nav = ({cart, currentUser, setCurrenttUser}) => {
         <Link to='/collection' className='glow-effect'>Collection</Link>
         <Link to='/about' className='glow-effect'>About</Link>
         <Link to='/contact' className='glow-effect'>Contact</Link>
-        <Link to='/checkout' className='glow-effect'>Cart: {cart.packages.length + cart.pictures.length}</Link>
+        <Link to='/checkout' className='glow-effect fix-cart'>Cart: {cart.packages.length + cart.pictures.length}</Link>
         { !currentUser ? 
         <Link to='login' className='glow-effect'>Login</Link> 
         :

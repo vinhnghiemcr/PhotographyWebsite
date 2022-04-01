@@ -46,7 +46,10 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
                         <button onClick={deleteAccount}>Delete Account</button>
                     </div>
                 </nav>
-                {review &&<Review currentUser={currentUser} id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
+                {review && 
+                <div className="review-container">
+                    <Review currentUser={currentUser} id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />
+                </div>}
                 <div className="user-container">
                     {userPictures && userPictures.map((picture) =>
                         <Picture 

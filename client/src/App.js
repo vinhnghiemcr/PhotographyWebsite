@@ -26,7 +26,8 @@ function App() {
   
   useEffect( async () => {
     const response = await axios.get(`${BASE_URL}/services`)
-    setServices(response.data)    
+    setServices(response.data)  
+    
   }, [currentUser])
   
 
@@ -49,9 +50,6 @@ function App() {
 
         </Routes>
       </main>
-      <footer>
-
-      </footer>
     </div>
   );
 }

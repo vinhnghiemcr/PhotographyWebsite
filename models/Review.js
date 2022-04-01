@@ -4,7 +4,7 @@ const Review = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
-    rating: {type: Number},
+    rating: {type: Number, required: true},
     user: { type: Schema.Types.ObjectId, ref: 'user', required: true}
   },
   { timestamps: true }

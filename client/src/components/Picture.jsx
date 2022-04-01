@@ -20,7 +20,7 @@ const Picture = ({url, owned, name, description, forSale, price, location, setCa
         <div className="picture-card" >
             { !forSale ? (
                 <div className="picture">
-                    <img src={url} alt="photo" onClick={handleOpen}/>
+                    <img className="small" src={url} alt="photo" onClick={handleOpen}/>
                     {isOpen && 
                     <dialog className="dialog" open onClick={handleOpen}  >
                         <img src={url} alt="zoom photo" onClick={handleOpen}  />
@@ -30,14 +30,14 @@ const Picture = ({url, owned, name, description, forSale, price, location, setCa
             ) :
             (
                 <div className="picture">
-                    <img src={url} alt="collection photo"  onClick={handleOpen} />
+                    <img src={url} alt="collection photo" className="small" onClick={handleOpen} />
                     <h3>{name}</h3>
                     <h4>{location}</h4>
                     <p>{description}</p>
                     <h4>Price: ${price}</h4>
                     {!owned && <button onClick={handleClick}>Add</button>}
                     {isOpen && 
-                    <dialog className="dialog" open onClick={handleOpen} >
+                    <dialog className="collection-dialog" open onClick={handleOpen} >
                         <h3>{name}</h3>
                         <h4>{location}</h4>
                         <img src={url} alt="zoom photo" onClick={handleOpen}  />
