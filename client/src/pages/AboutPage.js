@@ -1,14 +1,14 @@
-const about_img = require('../assets/about1.jpg')
+const about_img = require('../assets/about2.jpeg')
 
 const AboutPage = () => {
 
     return (
-        <div>
+        <div className='about'>
             <img src={about_img} alt="Photographer image" className='about-img'/>
-            <h3>My Story</h3>
-            
-            <p>I’m a software engineer & a photograper</p>
-            
+            <section>
+                <h3>My Story</h3>            
+                <p>I’m a software engineer & a photograper</p>
+            </section> 
         </div>
     )
 }

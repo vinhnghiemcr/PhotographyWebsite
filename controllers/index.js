@@ -96,6 +96,34 @@ const createUser = async (req, res) => {
     }
 }
 
+const updateUser = async (req, res) => {
+    try {
+        const { id } = req.params
+        const oldUser = await User.findById(id)
+        const user = req.body
+        let availableName = true
+        console.log(user, "user");
+        console.log(oldUser, "Old user");
+        
+        const users = await User.find()
+        if (user.username !== oldUser.username) {
+            users.forEach((u) => {
+                if (u.username === user.username) {
+                    return availableName = false
+                }
+            })
+        }
+        if (availableName) {
+            const newUser = await User.findByIdAndUpdate(id, {...user})
+            return res.status(201).json(newUser)
+        } else {
+            res.status(401).send(`${user.username}' is not available. <br/> Please choose another username`)  
+        }
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 const getUsers = async (req,res) => {
     try {
         const { username } = req.query
@@ -129,6 +157,9 @@ const verifyUser = async (req, res) => {
     }
 }
 
+
+
+
 const getUserById = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
@@ -138,7 +169,7 @@ const getUserById = async (req,res) => {
     }
 }
 
-const updateUserById = async (req,res) => {
+const updateUserReceipts = async (req,res) => {
     try {
         const user = await User.findById(req.params.id)
         const receipt = await new Receipt(req.body)
@@ -156,8 +187,7 @@ const updateUserById = async (req,res) => {
                         user.pictures.push(pic)
                     }
                 }
-                )
-                
+                )                
             }
             await receipt.save()
             await user.save()
@@ -255,9 +285,10 @@ module.exports = {
     getPictureByUserId,
     getCollectionPictures,
     createUser,
+    updateUser,
     getUsers,
     getUserById,
-    updateUserById,
+    updateUserReceipts,
     deleteUserById,
     verifyUser,
     createReview,

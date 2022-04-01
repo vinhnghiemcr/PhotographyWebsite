@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
-const SignUp = ({BASE_URL, setCurrenttUser, error, setError, handleClick}) => {
+const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleClick, currentUser}) => {
     let navigate = useNavigate()
     const [newUser, setNewUser] = useState({
         username: '',
@@ -11,8 +11,7 @@ const SignUp = ({BASE_URL, setCurrenttUser, error, setError, handleClick}) => {
     })
     const [rePassword, setRePasswork ] = useState('')
     
-    
-    
+  
     const handleChange = (e) => {
         setNewUser({...newUser,  [e.target.name]: e.target.value })
     } 
@@ -23,14 +22,26 @@ const SignUp = ({BASE_URL, setCurrenttUser, error, setError, handleClick}) => {
 
     const handleNewUser = async (e) => {
         e.preventDefault()
+        console.log(currentUser, "CURRENT USER")
+        console.log(`${BASE_URL}/users/${currentUser._id}`, 'API')
         if (rePassword === newUser.password){
-            await axios.post(`${BASE_URL}/users`, newUser)
-            .then((res) => {
+            if (currentUser) {
+                await axios.put(`${BASE_URL}/users/${currentUser._id}`, newUser)
+                .then((res) => {
                     setError('')
                     setCurrenttUser(res.data)
-                    navigate('/profile')
-            })
-            .catch((e) => setError(`${newUser.username} is not available. Please choose another username!`))
+                    setEdited((c) => !c)
+                })
+                .catch((e) => setError(`${newUser.username} is not available. Please choose another username!`))
+            } else {
+                await axios.post(`${BASE_URL}/users`, newUser)
+                .then((res) => {
+                        setError('')
+                        setCurrenttUser(res.data)
+                        navigate('/profile')
+                })
+                .catch((e) => setError(`${newUser.username} is not available. Please choose another username!`))
+            }
         } else {setError('Password must matched!')}
     }
 
@@ -56,7 +67,7 @@ const SignUp = ({BASE_URL, setCurrenttUser, error, setError, handleClick}) => {
             <input type="submit" />
             </div>
             <div className="button-container">
-            <button className="login-button" onClick={handleClick}>Login</button>
+            {!currentUser && <button className="login-button" onClick={handleClick}>Login</button>}
             </div>
             {error && <p>{error}</p>}
         </form>

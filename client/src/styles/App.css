@@ -336,3 +336,41 @@ footer h5 {
 .contact a:hover {
   color: #A65D56;
 }
+
+.receipt h1 {
+  color: #A65D56;
+}
+.receipt h4, .receipt h5 {
+  color: #D9ACA3;
+  font-weight: 300;
+}
+.receipt h3 {
+  color: #D9ACA3;
+  font-weight: 500;
+} 
+.receipt button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 15px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #D9ACA3;
+}
+.about img {
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.about h3, .about p {
+  margin: 20px 0;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

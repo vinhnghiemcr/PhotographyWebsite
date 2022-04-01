@@ -36,8 +36,11 @@ router.post('/users/verify', controllers.verifyUser)
 //get a user by id
 router.get('/users/:id', controllers.getUserById)
 
-//get a user by id
-router.put('/users/:id', controllers.updateUserById)
+//Update user's info
+router.put('/users/:id/', controllers.updateUser)
+
+//Update user's receipts
+router.put('/users/:id/receipts', controllers.updateUserReceipts)
 
 //get a user by id
 router.delete('/users/:id', controllers.deleteUserById)

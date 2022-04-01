@@ -15,7 +15,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
 
     useEffect(() => {
       setIsPaid(false)
-    }, [isPaid])
+    }, [])
 
     useEffect( async () => {
         await axios.get(`${BASE_URL}/packages`)
@@ -73,18 +73,18 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
 
     const generateReciept = () => {
         return (
-        <div>
-          <h4>Package/Picture............Price.............Quantity </h4>
+        <div className="printed-receipt">
+          <section className="items"><h4>Package/Picture</h4><h4>Price</h4> <h4>Quantity</h4></section>
           {data.map((item) => {
             total += item.price * item.count
-            return <h5>{item.name}...${item.price}...{item.count}</h5>
+            return <section className="items"><h5>{item.name}</h5><h5>${item.price}</h5><h5>{item.count}</h5></section>
           })}
-          <h3>Total:        ${total}</h3>
+          <section className="items"><h3>Total:</h3> <h3></h3><h3>${total}</h3></section>
         </div>)
       }
 
     const pay = async () => {
-        
+      setIsPaid(!isPaid)
         if (currentUser) {
             let receipt = {
                 items : {data},
@@ -92,10 +92,9 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
                 user: currentUser._id,
                 date: moment().format("DD-MM-YYYY hh:mm:ss").toString()
             }            
-            await axios.put(`${BASE_URL}/users/${currentUser._id}`, receipt)
+            await axios.put(`${BASE_URL}/users/${currentUser._id}/receipts`, receipt)
             .then((res) =>  {
                 console.log(res, "RESPONSE");
-                setIsPaid(!isPaid)
                 setCart({packages: [], pictures: []})                
             })
             .catch((e) => console.log(e))
@@ -108,7 +107,6 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
             await axios.post(`${BASE_URL}/receipts`, receipt)
             .then((res) =>  {
                 console.log(res, "RESPONSE");
-                setIsPaid(!isPaid)
                 setCart({packages: [], pictures: []})
                 
             })

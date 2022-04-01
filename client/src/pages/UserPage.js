@@ -3,17 +3,22 @@ import Review from "../components/Review"
 import Picture from "../components/Picture"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import SignUp from "../components/SignUp"
 
 const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => {
     let navigate = useNavigate()
     const [userPictures, setUserPictures] = useState(null)
     const [review, setReview] = useState(false)
+    const [edited, setEdited] = useState(false)
+    const [error, setError ] = useState('')
     
     useEffect( async () => {
         await axios.get(`${BASE_URL}/users/${currentUser._id}/pictures`)
         .then((res) => setUserPictures(res.data)  )
         .catch((e) => console.log(e))
         setOwned(true)
+        setReview(false)
+        setEdited(false)
     }, [])
     const logout = () => {
         setCurrenttUser(null)
@@ -33,6 +38,12 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
         .catch((e) => console.log(e))
     }
 
+    const editProfile = () => {
+        setEdited(!edited)
+        console.log(edited);
+        
+    }
+
     return (
         
         <div>
@@ -42,13 +53,18 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
                     <h3>Hello, {currentUser.displayName}!</h3>
                     <div>
                         { !review && <button onClick={toggleReview}>Write A Review</button>}
+                        <button onClick={editProfile}>Edit Profile</button>
                         <button onClick={logout}>Logout</button>
                         <button onClick={deleteAccount}>Delete Account</button>
                     </div>
                 </nav>
-                {review && 
+                {review  && 
                 <div className="review-container">
-                    <Review currentUser={currentUser} id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />
+                    {review && <Review currentUser={currentUser} id={currentUser._id} setReview={setReview} BASE_URL={BASE_URL} />}
+                </div>}
+                {edited && 
+                <div className="review-container">
+                    {edited && <SignUp setCurrenttUser={setCurrenttUser} setEdited={setEdited} error={error} setError={setError} BASE_URL={BASE_URL} currentUser={currentUser}/>}
                 </div>}
                 <div className="user-container">
                     {userPictures && userPictures.map((picture) =>
