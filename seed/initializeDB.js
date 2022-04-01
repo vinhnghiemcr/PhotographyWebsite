@@ -97,7 +97,7 @@ const main = async () => {
 
     const f9 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV1.jpg?raw=true",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH9.jpg?raw=true",
             forSale: false
         }
     )
@@ -105,17 +105,32 @@ const main = async () => {
     
     const f10 = new Picture(
         {
-            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV2.jpg?raw=true",
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FH10.jpg?raw=true",
             forSale: false
         }
     )
     await f10.save()
+    const f11 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV1.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await f11.save()
+    
+    const f12 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/family/FV2.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await f12.save()
 
     const service1 = new Service({
         name: "Family",
         description: "Saving precious moments of the family",
         packages: [package1._id, package2._id, package3._id],
-        pictures: [f1._id, f2._id, f3._id, f4._id, f5._id, f6._id, f7._id, f8._id, f9._id, f10._id]
+        pictures: [f1._id, f2._id, f3._id, f4._id, f5._id, f6._id, f7._id, f8._id, f9._id, f10._id, f11._id, f12._id]
     })
 
     await service1.save()
@@ -330,11 +345,35 @@ const main = async () => {
     )
     await p22.save()
 
+    const p23 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV11.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await p23.save()
+
+    const p24 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV12.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await p24.save()
+
+    const p25 = new Picture(
+        {
+            url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/portrait/PV13.jpg?raw=true",
+            forSale: false
+        }
+    )
+    await p25.save()
+
     const service2 = new Service({
         name: "Portrait",
         description: "A picture is worth a thousand words!",
         packages: [package4._id, package5._id, package6._id],
-        pictures: [p1._id, p2._id, p3._id, p4._id, p5._id, p6._id, p7._id, p8._id, p9._id, p10._id, p11._id, p12._id, p13._id, p14._id, p15._id, p16._id, p17._id, p18._id, p19._id, p20._id, p21._id, p22._id]
+        pictures: [p1._id, p2._id, p3._id, p4._id, p5._id, p6._id, p7._id, p8._id, p9._id, p10._id, p11._id, p12._id, p13._id, p14._id, p15._id, p16._id, p17._id, p18._id, p19._id, p20._id, p21._id, p22._id, p23._id, p24._id, p25._id]
     })
     await service2.save()
     package4.service = service2._id
