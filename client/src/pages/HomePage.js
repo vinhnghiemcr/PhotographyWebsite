@@ -10,15 +10,12 @@ const HomePage = ({ services , BASE_URL}) => {
     let index = 0
 
     useEffect( async () => {
-        const res = await axios.get(`api/reviews`)
+        const res = await axios.get(`api/reviews`)        
         
         const interval = setInterval(() => {
+            index = Math.floor(Math.random()* res.data.length)
              setReviewBody(res.data[index].description)
              setName(res.data[index].name )
-            if (index >= res.data.length) {
-                index = 0
-            } else index++
-
         } , 5000)
         return () => clearInterval(interval)
     },[])

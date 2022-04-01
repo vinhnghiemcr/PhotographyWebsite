@@ -991,7 +991,7 @@ const main = async () => {
     const review1 = new Review(
         {
             name: "Jenna",
-            description: "Beutifull Pictures",
+            description: "Beautifull Pictures",
             rating: 5,
             user: user2._id
         }
