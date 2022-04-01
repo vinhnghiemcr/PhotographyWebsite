@@ -23,10 +23,10 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
     const handleNewUser = async (e) => {
         e.preventDefault()
         console.log(currentUser, "CURRENT USER")
-        console.log(`${BASE_URL}/users/${currentUser._id}`, 'API')
+        console.log(`api/users/${currentUser._id}`, 'API')
         if (rePassword === newUser.password){
             if (currentUser) {
-                await axios.put(`${BASE_URL}/users/${currentUser._id}`, newUser)
+                await axios.put(`api/users/${currentUser._id}`, newUser)
                 .then((res) => {
                     setError('')
                     setCurrenttUser(res.data)
@@ -34,7 +34,7 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
                 })
                 .catch((e) => setError(`${newUser.username} is not available. Please choose another username!`))
             } else {
-                await axios.post(`${BASE_URL}/users`, newUser)
+                await axios.post(`api/users`, newUser)
                 .then((res) => {
                         setError('')
                         setCurrenttUser(res.data)

@@ -963,17 +963,161 @@ const main = async () => {
         }
     )
     await user2.save()
+    const user3 = new User(
+        {
+            username: "jenna",
+            password: "jenna",
+            displayName: "Jenna",
+            email: "jenna@gmail.com",
+            loginCount: 0,
+            pictures: [c4._id, c8._id, c30._id],
+
+        }
+    )
+    await user3.save()
+    const user4 = new User(
+        {
+            username: "molly",
+            password: "molly",
+            displayName: "Molly",
+            email: "molly@gmail.com",
+            loginCount: 0,
+            pictures: [c15._id, c18._id, c30._id],
+
+        }
+    )
+    await user4.save()
 
     const review1 = new Review(
         {
-            name: "Truong",
+            name: "Jenna",
             description: "Beutifull Pictures",
-            user: user1._id
+            rating: 5,
+            user: user2._id
         }
     )
     await review1.save()
+    user2.reviews = [review1._id]
+    await user1.save()
 
-    user1.reviews = [review1._id]
+    const review2 = new Review(
+        {
+            name: "Jenna",
+            description: "The photographs capture the subjects with incredible detail.",
+            rating: 5,
+            user: user2._id
+        }
+    )
+    await review2.save()
+    user2.reviews = [review2._id]
+    await user2.save()
+
+    const review3 = new Review(
+        {
+            name: "Molly",
+            description: "You can feel the depth of emotions that range from happiness to sadness.",
+            rating: 5,
+            user: user4._id
+        }
+    )
+    await review3.save()
+    user4.reviews = [review3._id]
+    await user4.save()
+
+    const review4 = new Review(
+        {
+            name: "Nick",
+            description: "I love the landscape photos",
+            rating: 5,
+            user: user2._id
+        }
+    )
+    await review4.save()
+    user2.reviews = [review4._id]
+    await user2.save()
+
+    const review5 = new Review(
+        {
+            name: "Nick",
+            description: "What breathtaking views!",
+            rating: 5,
+            user: user2._id
+        }
+    )
+    await review5.save()
+    user2.reviews = [review5._id]
+    await user2.save()
+
+    const review6 = new Review(
+        {
+            name: "Jenna",
+            description: "Is this a trick of the camera or natural lighting?",
+            rating: 5,
+            user: user3._id
+        }
+    )
+    await review6.save()
+    user3.reviews = [review6._id]
+    await user3.save()
+
+    const review7 = new Review(
+        {
+            name: "Canh",
+            description: "These photos afford great scope for the imagination!",
+            rating: 5,
+            user: user1._id
+        }
+    )
+    await review7.save()
+    user1.reviews = [review7._id]
+    await user1.save()
+
+    const review8 = new Review(
+        {
+            name: "Michael",
+            description: "I missed Lubbockkkkkkkkkkkk",
+            rating: 5,
+            user: user1._id
+        }
+    )
+    await review8.save()
+    user1.reviews = [review8._id]
+    await user1.save()
+
+    const review9 = new Review(
+        {
+            name: "Chinwendu",
+            description: "I feel inspired to travel to the mountains of Hawaii now.",
+            rating: 5,
+            user: user1._id
+        }
+    )
+    await review9.save()
+    user1.reviews = [review9._id]
+    await user1.save()
+
+    const review10 = new Review(
+        {
+            name: "Patrick",
+            description: "Expert technique!",
+            rating: 5,
+            user: user1._id
+        }
+    )
+    await review10.save()
+    user1.reviews = [review9._id]
+    await user1.save()
+
+    const review11 = new Review(
+        {
+            name: "Mark",
+            description: "These photos afford great scope for the imagination!",
+            rating: 5,
+            user: user1._id
+        }
+    )
+    await review11.save()
+    user1.reviews = [review9._id]
     await user1.save()
 
   console.log('Created database!')

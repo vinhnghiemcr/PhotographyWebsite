@@ -13,7 +13,7 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
     const [error, setError ] = useState('')
     
     useEffect( async () => {
-        await axios.get(`${BASE_URL}/users/${currentUser._id}/pictures`)
+        await axios.get(`api/users/${currentUser._id}/pictures`)
         .then((res) => setUserPictures(res.data)  )
         .catch((e) => console.log(e))
         setOwned(true)
@@ -28,7 +28,7 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
     }
 
     const deleteAccount = async () => {
-        await axios.delete(`${BASE_URL}/users/${currentUser._id}`)
+        await axios.delete(`api/users/${currentUser._id}`)
         .then((res) => {
             setCurrenttUser(null)
             navigate('/')

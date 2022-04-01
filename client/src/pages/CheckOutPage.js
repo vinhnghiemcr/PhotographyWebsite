@@ -18,11 +18,11 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
     }, [])
 
     useEffect( async () => {
-        await axios.get(`${BASE_URL}/packages`)
+        await axios.get(`api/packages`)
         .then((res) => setPackages(res.data) )
         .catch((e) => console.log(e))
 
-        await axios.get(`${BASE_URL}/collection/pictures`)
+        await axios.get(`api/collection/pictures`)
         .then((res) => setPictures(res.data))
         .catch((e) => console.log(e))
     }, [])

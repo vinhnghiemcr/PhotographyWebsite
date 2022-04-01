@@ -30,8 +30,8 @@ const Review = ({currentUser, id, BASE_URL, setReview }) => {
     console.log(data, "DATA")
 
     const saveReview = async () => {
-        console.log(`${BASE_URL}/users/${id}/reviews`, "LINK")
-      await axios.post(`${BASE_URL}/users/${id}/reviews`, data).then(function (response) {
+        console.log(`api/users/${id}/reviews`, "LINK")
+      await axios.post(`api/users/${id}/reviews`, data).then(function (response) {
         setComment('')
         setRating(5)
       })

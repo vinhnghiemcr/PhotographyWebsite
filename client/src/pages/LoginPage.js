@@ -20,7 +20,7 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
 
     const handleSubmmit = async (e) => {
         e.preventDefault()  
-        await axios.post(`${BASE_URL}/users/verify`, user)
+        await axios.post(`api/users/verify`, user)
         .then((res) => {
             if (typeof res.data === 'object') {
                 setError('')

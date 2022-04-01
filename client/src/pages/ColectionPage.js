@@ -11,7 +11,7 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
     const [searched, setSearched] = useState(false)
 
     useEffect(async () => {
-        const response = await axios.get(`${BASE_URL}/collection/pictures`)
+        const response = await axios.get(`api/collection/pictures`)
         setPictures(response.data)
         setOwned(false)
     }, [])
@@ -22,7 +22,7 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const getSearchResults = async (e) => {
         e.preventDefault()
-        await axios.get(`${BASE_URL}/search?search=${searchQuery}`)
+        await axios.get(`api/search?search=${searchQuery}`)
         .then((response) => {
             setSearchResults(response.data)
             setSearched(true)
