@@ -92,7 +92,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
                 user: currentUser._id,
                 date: moment().format("DD-MM-YYYY hh:mm:ss").toString()
             }            
-            await axios.put(`${BASE_URL}/users/${currentUser._id}/receipts`, receipt)
+            await axios.put(`api/users/${currentUser._id}/receipts`, receipt)
             .then((res) =>  {
                 console.log(res, "RESPONSE");
                 setCart({packages: [], pictures: []})                
@@ -104,9 +104,8 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
                 total: total,
                 date: moment().format("DD-MM-YYYY hh:mm:ss").toString()
             }            
-            await axios.post(`${BASE_URL}/receipts`, receipt)
+            await axios.post(`api/receipts`, receipt)
             .then((res) =>  {
-                console.log(res, "RESPONSE");
                 setCart({packages: [], pictures: []})
                 
             })
@@ -119,7 +118,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
             <h1>Receipt Summary</h1>
             { generateReciept()}
             {isPaid ? 
-                <h3>Thank you for shopping with us!</h3> 
+                <h3>Thank you, for shopping with us!</h3> 
                 : 
                 <button onClick={pay}>Pay</button>
             }

@@ -25,10 +25,15 @@ function App() {
  
   
   useEffect( async () => {
-    const response = await axios.get(`${BASE_URL}/services`)
-    setServices(response.data)  
+    const response = await axios.get(`api/services`)
+    setServices(response.data) 
+
+    if (currentUser) {
+      const res = await axios.get(`api/users/${currentUser._id}`)
+      setCurrenttUser(res.data)
+    }
     
-  }, [currentUser])
+  }, [])
   
 
   return (
