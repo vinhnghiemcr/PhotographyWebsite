@@ -17,7 +17,7 @@ const Login = ({user, handleChange, handleSubmmit, handleClick}) => {
                 <input type="submit" className="button-container"/>
                 </div>
                 <div>
-                <button className="login-button" onClick={handleClick}>Login</button>
+                {/* <button className="login-button" onClick={handleClick}>Login</button> */}
                 </div>
         </form>
     )

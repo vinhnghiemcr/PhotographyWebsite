@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 import axios from "axios";
@@ -12,6 +12,9 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
         username: '',
         password: ''
     })
+    useEffect(() => {
+        setIsSignUp(false)
+    }, [])
     const [error, setError ] = useState('')
     
     const handleChange = (e) => {  
@@ -45,11 +48,13 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
                         handleSubmmit={handleSubmmit}
                         handleClick={handleClick}
                     />
+                    <button className="login-button" onClick={handleClick}>Sign Up</button>
                     {error && <p>{error}</p>}
                 </div>)            
             :
                 (<div>
                     <SignUp handleClick={handleClick} error={error} setError={setError} BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  /> 
+                    <button className="login-button" onClick={handleClick}>Login</button>
                 </div>)
             }
         </div>

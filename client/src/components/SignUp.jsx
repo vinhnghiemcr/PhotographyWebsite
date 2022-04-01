@@ -25,7 +25,7 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
         console.log(currentUser, "CURRENT USER")
         console.log(`api/users/${currentUser._id}`, 'API')
         if (rePassword === newUser.password){
-            if (currentUser) {
+            if (currentUser === undefined) {
                 await axios.put(`api/users/${currentUser._id}`, newUser)
                 .then((res) => {
                     setError('')
@@ -67,7 +67,7 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
             <input type="submit" />
             </div>
             <div className="button-container">
-            {!currentUser && <button className="login-button" onClick={handleClick}>Login</button>}
+            {/* {!currentUser && <button className="login-button" onClick={handleClick}>Login</button>} */}
             </div>
             {error && <p>{error}</p>}
         </form>

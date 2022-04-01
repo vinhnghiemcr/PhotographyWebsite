@@ -376,3 +376,10 @@ footer h5 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.login-button {
+  margin-left: 30px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  color: white;
+}

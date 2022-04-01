@@ -10,7 +10,7 @@ const HomePage = ({ services , BASE_URL}) => {
     let index = 0
 
     useEffect( async () => {
-        const res = await axios.get(`api/reviews`) 
+        const res = await axios.get(`api/reviews`)
         
         const interval = setInterval(() => {
              setReviewBody(res.data[index].description)
