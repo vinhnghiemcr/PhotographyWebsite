@@ -22,10 +22,8 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
 
     const handleNewUser = async (e) => {
         e.preventDefault()
-        console.log(currentUser, "CURRENT USER")
-        console.log(`api/users/${currentUser._id}`, 'API')
         if (rePassword === newUser.password){
-            if (currentUser === undefined) {
+            if (currentUser) {
                 await axios.put(`api/users/${currentUser._id}`, newUser)
                 .then((res) => {
                     setError('')

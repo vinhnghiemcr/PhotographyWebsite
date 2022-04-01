@@ -4,7 +4,7 @@ import SignUp from "../components/SignUp";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
 
-const LoginPage = ({BASE_URL, setCurrenttUser}) => {
+const LoginPage = ({BASE_URL, setCurrenttUser, currentUser}) => {
     
     let navigate = useNavigate()
     const [isSignUp, setIsSignUp] = useState(false)
@@ -53,7 +53,7 @@ const LoginPage = ({BASE_URL, setCurrenttUser}) => {
                 </div>)            
             :
                 (<div>
-                    <SignUp handleClick={handleClick} error={error} setError={setError} BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser}  /> 
+                    <SignUp handleClick={handleClick} error={error} setError={setError} BASE_URL={BASE_URL} currentUser={currentUser} setCurrenttUser={setCurrenttUser}  /> 
                     <button className="login-button" onClick={handleClick}>Login</button>
                 </div>)
             }

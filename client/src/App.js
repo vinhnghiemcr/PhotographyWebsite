@@ -43,7 +43,7 @@ function App() {
           <Route path='collection' element={<CollectionPage setOwned={setOwned} owned={owned} BASE_URL={BASE_URL} setCart={setCart} />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='contact' element={<ContactPage  />} />
-          <Route path='login' element={<LoginPage BASE_URL={BASE_URL} setCurrenttUser={setCurrenttUser} />} />
+          <Route path='login' element={<LoginPage BASE_URL={BASE_URL} currentUser={currentUser} setCurrenttUser={setCurrenttUser} />} />
           <Route path='service/:id' element={<ServicePage setCart={setCart} services={services}/>} />
           <Route path='profile'  element={<UserPage setOwned={setOwned} owned={owned} BASE_URL={BASE_URL} cart={cart} currentUser={currentUser} setCurrenttUser={setCurrenttUser} />} />
           <Route path='checkout' element={<CheckOutPage isPaid={isPaid} setIsPaid={setIsPaid}  cart={cart} setCart={setCart} currentUser={currentUser}  BASE_URL={BASE_URL} />} />
