@@ -6,7 +6,7 @@ import Search from "../components/Search"
 const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const [pictures, setPictures] = useState([])
-    const [serchResults, setSerchResults] = useState([])
+    const [searchResults, setSearchResults] = useState([])
     const [searchQuery, setSearchQuery] = useState('')
     const [searched, toggleSearched] = useState(false)
 
@@ -22,8 +22,9 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const getSearchResults = async (e) => {
         e.preventDefault()
-        const response = await axios.get(`${BASE_URL}?search=${searchQuery}`)
-        setSearchResults(response)
+        const response = await axios.get(`${BASE_URL}/search?search=${searchQuery}`)
+        setSearchResults(response.data)
+        console.log(response.data, "RESULTS")
         toggleSearched(true)
         setSearchQuery('')
     }
@@ -35,7 +36,20 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
                 <div className="search">
                     <h2>Search Results</h2>
                     <section className="search-results container-grid">
-                        {/* {(searchResults && searchResults.map((game, index)=> (<GameCard key ={index} name={game.name} rating={game.rating} image={game.background_image} onClick={() => props.showGame(game)}/>)))} */}
+                        {(searchResults && searchResults.map((picture)=> 
+                            <Picture 
+                            owned={owned}
+                            key={picture._doc._id}
+                            name={picture._doc.name}
+                            description={picture._doc.description}
+                            location={picture._doc.location}
+                            url={picture._doc.url}
+                            forSale={picture._doc.forSale}
+                            price={picture._doc.price}
+                            id={picture._doc._id}
+                            setCart={setCart}
+                            />
+                        ))}
                     </section>
                 </div>
             ) : (

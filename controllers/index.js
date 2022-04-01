@@ -281,8 +281,20 @@ const search = async (req,res) => {
     try {
         const { search } = req.query
         const pictures = await Picture.find({forSale: true})
-        const searchQueries = search.split(" ").toLowerCase()
-        return res.status(200).json(pictures)
+        const searchQueries = search.toLowerCase().split(" ")
+        const names = pictures.map((pic) => pic.name.toLowerCase().split(" "))        
+        const score = names.map((name) => {
+            let grade = 0
+            searchQueries.forEach((word) => {
+                if ( name.includes(word)) {
+                    grade += 100/searchQueries.length
+                }
+            })
+            return grade
+        })
+        let results = pictures.map((pic, index) => {return {...pic, score: score[index]}})
+        results = results.filter((result) => result.score > 50)
+        return res.status(200).json(results)
     } catch (error) {
         return res.status(500).send(error.message)
     }

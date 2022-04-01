@@ -7,7 +7,7 @@ const router = Router()
 router.get('/', (req, res) => res.send('This is root!'))
 
 //search query
-router.get('', controllers.search)
+router.get('/search', controllers.search)
 
 //get all services in db
 router.get('/services', controllers.getServices)
