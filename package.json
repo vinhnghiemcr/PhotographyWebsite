@@ -9,6 +9,10 @@
     "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
     "build": "cd client && rm -rf build && npm install && npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhnghiemcr/PhotographyWebsite.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,4 +26,5 @@
     "nodemon": "^2.0.15",
     "react-router-dom": "^6.2.2"
   }
+  
 }

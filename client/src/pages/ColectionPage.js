@@ -2,7 +2,6 @@ import { useState, useEffect  } from "react"
 import axios from "axios"
 import Picture from "../components/Picture"
 import Search from "../components/Search"
-import { response } from "express"
 
 const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
