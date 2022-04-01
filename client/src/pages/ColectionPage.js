@@ -2,13 +2,14 @@ import { useState, useEffect  } from "react"
 import axios from "axios"
 import Picture from "../components/Picture"
 import Search from "../components/Search"
+import { response } from "express"
 
 const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const [pictures, setPictures] = useState([])
     const [searchResults, setSearchResults] = useState([])
     const [searchQuery, setSearchQuery] = useState('')
-    const [searched, toggleSearched] = useState(false)
+    const [searched, setSearched] = useState(false)
 
     useEffect(async () => {
         const response = await axios.get(`${BASE_URL}/collection/pictures`)
@@ -22,11 +23,18 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
 
     const getSearchResults = async (e) => {
         e.preventDefault()
-        const response = await axios.get(`${BASE_URL}/search?search=${searchQuery}`)
-        setSearchResults(response.data)
-        console.log(response.data, "RESULTS")
-        toggleSearched(true)
-        setSearchQuery('')
+        await axios.get(`${BASE_URL}/search?search=${searchQuery}`)
+        .then((response) => {
+            setSearchResults(response.data)
+            setSearched(true)
+            setSearchQuery('')
+        })
+        .catch((e)=> console.log(e))
+        
+    }
+
+    const closeSearch = () => {
+        setSearched(false)
     }
 
     return (
@@ -47,10 +55,10 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
                             forSale={picture._doc.forSale}
                             price={picture._doc.price}
                             id={picture._doc._id}
-                            setCart={setCart}
                             />
                         ))}
                     </section>
+                    <button onClick={closeSearch}>Close</button>
                 </div>
             ) : (
             <section className="collection-container">

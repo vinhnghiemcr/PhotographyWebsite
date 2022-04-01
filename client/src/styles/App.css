@@ -300,7 +300,9 @@ input[type="submit"]:hover {
 .fix-cart {
   width: 85px;
 }
-
+.small {
+  top: 0;
+}
 .small:hover {
   opacity: 0.8;
   top: -10px;

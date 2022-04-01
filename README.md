@@ -10,7 +10,7 @@
 
 ### **_Decription_**
 
-PhotographyWebsite is my personal website for my photography bussiness. The website will provide infomation about services and packages for customers. It also have a collection of my traveling photos.
+PhotographyWebsite is my personal website for my photography bussiness. The website will provide infomation about services and packages for customers. It also have a collection of my traveling photos. Custumers can add the desired packages as well as favorites photos from the collection to the cart. They can either check out as a guest or a member. They can also leave a review which will be display to the homepage.
 
 ---
 
@@ -33,20 +33,25 @@ PhotographyWebsite is my personal website for my photography bussiness. The webs
 
 ### **_Task List_**
 
-- [ ] Back-End development
-  - [ ] Database
-  - [ ] API
-- [ ] Front-End development
-  - [ ] Component Hierarchy Diagram
-  - [ ] Link pages and components
-  - [ ] API call to server
+- [x] Back-End development
+  - [x] Database
+  - [x] API
+- [x] Front-End development
+  - [x] Component Hierarchy Diagram
+  - [x] Link pages and components
+  - [x] API call to server
 
 ---
 
+### **_Bonus Features_**
+
+- Search feature for collection pictures
+- Display revies from customers for every 10 seconds
+
 ### **_Futrure Update_**
 
-- [ ] Intergated payment
-- [ ] Use third party Authorization API for better security
+- Intergated payment
+- Use third party Authorization API for better security
 
 ---
 
@@ -56,4 +61,4 @@ PhotographyWebsite is my personal website for my photography bussiness. The webs
 
 ### **_Credits_**
 
-<!-- Cat Images: [DuckDuckGo](https://duckduckgo.com/?t=h_)<br /> -->
+Glow Effect: [CSS Scan](https://getcssscan.com/css-buttons-examples)<br />
