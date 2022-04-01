@@ -15,7 +15,7 @@ const HomePage = ({ services , BASE_URL}) => {
         const interval = setInterval(() => {
              setReviewBody(res.data[index].description)
              setName(res.data[index].name )
-            if (index === res.data.length) {
+            if (index >= res.data.length) {
                 index = 0
             } else index++
 

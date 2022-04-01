@@ -277,6 +277,17 @@ const createReceipt = async (req,res) => {
     }
 }
 
+const search = async (req,res) => {
+    try {
+        const { search } = req.query
+        const pictures = await Picture.find({forSale: true})
+        const searchQueries = search.split(" ").toLowerCase()
+        return res.status(200).json(pictures)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 module.exports = {
     getServices,
     getPackagesByServiceId,
@@ -296,5 +307,6 @@ module.exports = {
     getReviewByUserId,
     updateReview,
     gettAllReviews,
-    createReceipt
+    createReceipt,
+    search
 }

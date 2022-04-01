@@ -17,9 +17,7 @@ const UserPage = ({setOwned, owned, currentUser, setCurrenttUser, BASE_URL}) => 
         .then((res) => setUserPictures(res.data)  )
         .catch((e) => console.log(e))
         setOwned(true)
-        setReview(false)
-        setEdited(false)
-    }, [])
+    }, [edited])
     const logout = () => {
         setCurrenttUser(null)
         navigate(-1)
