@@ -24,12 +24,12 @@ PhotographyWebsite is my personal website for my photography bussiness. The webs
 
 ---
 
-### **_Screenshots_**
+### **_Demo_**
 
-<!-- Image 1
-![Image 1](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.R3IAG0Z7SAzTV56Xuvs1LwHaFj%26pid%3DApi&f=1) -->
 
----
+![](https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/photography%20website.gif?raw=true)
+
+
 
 ### **_Task List_**
 
@@ -45,8 +45,8 @@ PhotographyWebsite is my personal website for my photography bussiness. The webs
 
 ### **_Bonus Features_**
 
-- Search feature for collection pictures
-- Display revies from customers for every 10 seconds
+- Search algorithm returning best matched pictures
+- Display reviews from customers for every 5 seconds
 
 ### **_Futrure Update_**
 
@@ -57,6 +57,7 @@ PhotographyWebsite is my personal website for my photography bussiness. The webs
 
 ### **Deployment**
 
+ [Nghiem Truong Photography](http://nghiemtruongphotography.herokuapp.com/)
 ---
 
 ### **_Credits_**
