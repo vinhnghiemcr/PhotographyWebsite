@@ -883,7 +883,7 @@ const main = async () => {
 
     const c25 = new Picture(
         {   
-            name: "Texas Teach University in Spring",
+            name: "Texas Tech University in Spring",
             description: "March 2019",
             location: "Lubbock, TX",
             url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(25).jpg?raw=true",
@@ -895,7 +895,7 @@ const main = async () => {
 
     const c26 = new Picture(
         {   
-            name: "Texas Teach University Campus",
+            name: "Texas Tech University Campus",
             description: "March 2019",
             location: "Lubbock, TX",
             url: "https://github.com/vinhnghiemcr/PhotographyWebsite/blob/main/client/src/assets/images/collection/c1%20(26).jpg?raw=true",

@@ -7,7 +7,7 @@ const AboutPage = () => {
             <img src={about_img} alt="Photographer image" className='about-img'/>
             <section>
                 {/* <h3>My Story</h3>             */}
-                <p>Howde, </p>
+                <p>Howdy, </p>
                 <p>I’m Nghiem Truong - a software engineer & a photographer!</p>
                 <br />
                 <p>Nghiem Truong Photography is a photography app for the ages. Dive in and add photos to your cart. The different categories allow you to develop a curated collection of pieces that will brighten up your home.</p>

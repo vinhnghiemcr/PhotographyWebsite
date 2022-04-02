@@ -4,6 +4,9 @@
   font-family: 'Montserrat', sans-serif;
   margin: 10px;
 }
+html {
+  margin-top: 10px;
+}
 button {
   background-color: #537FA6;
   border: 2px solid #537FA6;
