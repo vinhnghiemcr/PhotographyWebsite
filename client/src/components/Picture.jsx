@@ -29,12 +29,14 @@ const Picture = ({url, owned, name, description, forSale, price, location, setCa
                 </div>
             ) :
             (
-                <div className="picture">
-                    <img src={url} alt="collection photo" className="small" onClick={handleOpen} />
-                    <h3>{name}</h3>
-                    <h4>{location}</h4>
-                    <p>{description}</p>
-                    <h4>Price: ${price}</h4>
+                <div className="picture colection-picture">
+                    <div>
+                        <img src={url} alt="collection photo" className="small" onClick={handleOpen} />
+                        <h3>{name}</h3>
+                        <h4>{location}</h4>
+                        <p>{description}</p>
+                        <h4>Price: ${price}</h4>
+                    </div>
                     {!owned && <button onClick={handleClick}>Add</button>}
                     {isOpen && 
                     <dialog className="collection-dialog" open onClick={handleOpen} >

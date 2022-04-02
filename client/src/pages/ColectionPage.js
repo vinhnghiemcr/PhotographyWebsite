@@ -56,8 +56,9 @@ const CollectionPage = ({BASE_URL, setCart, setOwned, owned}) => {
                             id={picture._doc._id}
                             />
                         ))}
+                        <button onClick={closeSearch}>Close</button>
                     </section>
-                    <button onClick={closeSearch}>Close</button>
+                    
                 </div>
             ) : (
             <section className="collection-container">

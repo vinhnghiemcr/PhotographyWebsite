@@ -3,7 +3,7 @@ import React from 'react'
 const Search = (props) => {
 
   return (
-    <form onSubmit={props.onSubmit}>
+    <form onSubmit={props.onSubmit} className="form-search">
       <input
         type="text"
         name="search"

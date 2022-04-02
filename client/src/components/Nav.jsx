@@ -9,7 +9,7 @@ const Nav = ({cart, currentUser, setCurrenttUser}) => {
 
   return (
     <header className='nav'>
-      <h2>Nghiem Truong Photography</h2>
+      <h2 className='studio-name'>Nghiem Truong Photography</h2>
       <nav>
         <Link to='/' className='glow-effect'>Home</Link>
         <Link to='/collection' className='glow-effect'>Collection</Link>

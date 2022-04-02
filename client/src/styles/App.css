@@ -376,10 +376,226 @@ footer h5 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.items h3 {
+  margin: 10px;
+}
 
 .login-button {
   margin-left: 30px;
   padding: 10px 10px;
   border-radius: 12px;
   color: white;
+}
+.search h2 {
+  color: #789EBF;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #root, .App, header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction:column;    
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    height: 10%;
+  }
+  header nav {
+    margin: 0;
+    padding: 0;
+  }
+  .nav h2 {
+    flex: 0;
+    font-size: 20px;
+    color: #789EBF;
+  }
+  .glow-effect {
+    font-size: 8px;
+  }
+  .nav nav {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main {
+    height: 80%;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+  }
+  
+  .service , .service-container {
+    margin: 0;
+  }
+  .service a, .service div , .service p{
+    margin: 0;
+    padding: 0;
+  }
+  .service-picture-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 2px
+  }
+
+  .picture, .small {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .small {    
+    border: 1px solid black;
+  }
+  footer {
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dialog {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dialog img {
+    max-width: 95%;
+    border: 0;
+  }
+  .package-options {
+    font-size: 10px;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .package-container {
+    margin: 0;
+  }
+  .package {
+    text-align: center;
+  }
+  .package h3 {
+    margin: 10px;
+  }
+  .package-picture-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 0;
+  }
+  .picture-card {
+    margin: 0;
+  }
+  .small {
+    max-width: 95%;
+  }
+  input[name=search] {
+    font-size: 10px;
+    width: 60%;
+  }
+  .colection-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-img {
+    margin-top: 50px;
+    max-width: 60%;
+  }
+  .about p {
+    margin: 0;
+  }
+  .contact {
+    margin-top: 50px;
+  }
+  .receipt {
+    margin-top: 30px;;
+  }
+  form {
+    margin: 30px 0;
+  }
+  form input {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .login-button {
+    margin: 10px;
+  }
+  .person {
+    height: 100%;
+  }
+  .user-nav {
+    margin: 30px 0 0 0;
+  }
+  .user-nav h3 {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-buttons button {
+    font-size: 8px;
+  }
+  .user-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+  .collection-dialog {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .collection-dialog img {
+    max-width: 95%;
+    border: 0;
+  }
+  .review-container {
+    max-width: 100%;
+  }
+  .review {
+    max-width: 80%;
+  }
+  .review textarea {
+    max-width: 90%;
+  }
+  .signup-container {
+    padding: 10px;
+  }
+  
+  .signup-container input {
+    max-width: 95%;
+  }
+  .signup-container input[type=submit] {
+    padding: 10px;
+  }
+  .button-container {
+    margin: 10px 0 10px 10px;
+  }
+  
+
 }

@@ -79,7 +79,7 @@ const CheckOutPage = ({BASE_URL, cart, setCart ,currentUser, isPaid, setIsPaid})
             total += item.price * item.count
             return <section className="items"><h5>{item.name}</h5><h5>${item.price}</h5><h5>{item.count}</h5></section>
           })}
-          <section className="items"><h3>Total:</h3> <h3></h3><h3>${total}</h3></section>
+          <section className="items"><h3>Total:</h3> <h3>${total}</h3></section>
         </div>)
       }
 

@@ -17,7 +17,7 @@ const ServicePage = ({services, setCart}) => {
 
 
     return (
-        <div>
+        <div className="package-container">
             <section className="package-options">
                 <div></div>
                 {packages.map((p) => 

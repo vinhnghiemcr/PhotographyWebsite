@@ -44,7 +44,7 @@ const SignUp = ({BASE_URL, setEdited, setCurrenttUser, error, setError, handleCl
     }
 
     return (
-        <form onSubmit={handleNewUser}>
+        <form onSubmit={handleNewUser} className="signup-container">
             <div className="input-container">
             <label>Username: </label>
             <input onChange={handleChange} type="text" name="username" value={newUser.username} required />
