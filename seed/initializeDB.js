@@ -128,7 +128,7 @@ const main = async () => {
 
     const service1 = new Service({
         name: "Family",
-        description: "Saving precious moments of the family",
+        description: "Saving precious moments of your family",
         packages: [package1._id, package2._id, package3._id],
         pictures: [f1._id, f2._id, f3._id, f4._id, f5._id, f6._id, f7._id, f8._id, f9._id, f10._id, f11._id, f12._id]
     })
