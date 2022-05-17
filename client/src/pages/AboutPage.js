@@ -8,11 +8,11 @@ const AboutPage = () => {
             <section>
                 {/* <h3>My Story</h3>             */}
                 <p>Howdy, </p>
-                <p>I’m Nghiem Truong - a software engineer & a photographer!</p>
+                <p>I’m Nghiem Truong - the photographer & software engineer!</p>
                 <br />
-                <p>Nghiem Truong Photography is a photography app for the ages. Dive in and add photos to your cart. The different categories allow you to develop a curated collection of pieces that will brighten up your home.</p>
+                <p>Nghiem Truong Photography is a website for the ages. It was created with photographers in mind and allows me to capture my view of the world through the digital relm.  The site allows you explore my vision through a curated library, add artwork to the cart and purchase the piece.</p>
                 <br />
-                <p>This app was created with photographers in mind as a way to sell their artwork through the digital realm. Checkout their work and possibly scope out your next travel destination on this app.</p>
+                <p>Hopefully after browsing through the website, you may be able to brighten up your house with a few pieces or be inspired in your next travel destination</p>
             </section> 
         </div>
     )
